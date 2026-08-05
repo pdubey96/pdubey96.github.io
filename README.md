@@ -10,7 +10,7 @@ dependencies — just open `index.html`.
 | `index.html` | All page content.                                       |
 | `style.css`  | All styling, including the light/dark theme.            |
 | `script.js`  | Mobile nav, dark-mode toggle, footer year.              |
-| `CV_Jun2026_DUBEY_Prasanjit.pdf` | Your CV (the CV icon links to it).  |
+| `Prasanjit_Dubey_CV_Aug2026.pdf` | Your CV (the CV icon links to it).  |
 | `mypicnov2025.jpg` | Your headshot, shown as the circular avatar.      |
 | `assets/`    | Spare folder for any additional images.                 |
 
@@ -36,7 +36,7 @@ A few things only you can supply — search `index.html` for these:
 - **Photo crop** — the avatar uses `object-position: center 22%` in `style.css`
   (`.avatar`) to center your face. Nudge that percentage if you want a tighter
   or looser crop.
-- **CV filename** — the CV icon links to `CV_Jun2026_DUBEY_Prasanjit.pdf`. When
+- **CV filename** — the CV icon links to `Prasanjit_Dubey_CV_Aug2026.pdf`. When
   you update the CV, either keep that exact filename or change the one `href` in
   `index.html` to match the new name.
 - **Phone number** — intentionally left off the public site for privacy. Add it
