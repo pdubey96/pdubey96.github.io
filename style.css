@@ -299,6 +299,52 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 }
 .pub-links a:hover { text-decoration: none; border-color: var(--accent); background: var(--accent-soft); }
 
+/* ---------------- Education ---------------- */
+.edu-list { list-style: none; margin: 1.8rem 0 0; padding: 0; }
+.edu-item {
+  padding: 0 0 1.4rem 1.4rem;
+  margin-left: 0.3rem;
+  border-left: 2px solid var(--border);
+  position: relative;
+}
+.edu-item:last-child { padding-bottom: 0; border-left-color: transparent; }
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.edu-detail {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+.edu-detail li { margin-bottom: 0.2rem; }
+.edu-detail li:last-child { margin-bottom: 0; }
+
+/* ---------------- Talks ---------------- */
+.talk-list { list-style: none; margin: 1.6rem 0 0; padding: 0; }
+.talk { padding: 1.1rem 0; border-bottom: 1px solid var(--border); }
+.talk:last-child { border-bottom: 0; padding-bottom: 0; }
+.talk-title { font-size: 1.05rem; margin: 0 0 0.5rem; line-height: 1.35; }
+.talk-venues { list-style: none; margin: 0; padding: 0; }
+.talk-venues li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.18rem 0;
+}
+.talk-venue { color: var(--text-soft); font-size: 0.93rem; }
+.talk-year { color: var(--text-muted); font-size: 0.9rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.talk .pub-award { margin: 0.35rem 0 0; }
+
 /* ---------------- Experience ---------------- */
 .exp-list { list-style: none; margin: 1.8rem 0 0; padding: 0; }
 .exp-item {
@@ -330,6 +376,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 .exp-date { color: var(--text-muted); font-size: 0.9rem; white-space: nowrap; }
 .exp-org { color: var(--accent); font-size: 0.95rem; margin: 0.1rem 0 0.4rem; }
 .exp-desc { margin: 0; font-size: 0.95rem; color: var(--text-soft); }
+.exp-links { margin-top: 0.6rem; }
 
 /* ---------------- Awards ---------------- */
 .awards-list { list-style: none; margin: 0; padding: 0; }
@@ -356,6 +403,19 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 .service-block ul { margin: 0; padding-left: 1.1rem; color: var(--text-soft); font-size: 0.96rem; }
 .service-block li { margin-bottom: 0.3rem; }
 
+/* ---------------- Technical skills ---------------- */
+.skills-list { margin: 1.6rem 0 0; }
+.skill-row {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  gap: 1.2rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.skill-row:last-child { border-bottom: 0; }
+.skill-row dt { font-weight: 600; color: var(--text); font-size: 0.95rem; }
+.skill-row dd { margin: 0; color: var(--text-soft); font-size: 0.95rem; line-height: 1.6; }
+
 /* ---------------- News ---------------- */
 .news-list { list-style: none; margin: 0; padding: 0; }
 .news-list li { display: flex; gap: 1.2rem; padding: 0.7rem 0; border-bottom: 1px solid var(--border); }
@@ -366,7 +426,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 /* ---------------- Contact ---------------- */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   margin: 1.8rem 0 1.5rem;
 }
@@ -382,7 +442,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 }
 .contact-card:hover { text-decoration: none; transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--accent); }
 .contact-label { font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
-.contact-value { font-weight: 500; color: var(--text); word-break: break-word; }
+.contact-value { font-weight: 500; color: var(--text); font-size: 0.9rem; overflow-wrap: break-word; }
 .contact-address { color: var(--text-soft); font-size: 0.95rem; line-height: 1.6; }
 
 /* ---------------- Footer ---------------- */
@@ -414,9 +474,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
     overflow: hidden;
     transition: max-height 0.25s ease;
   }
-  .nav-links.open { max-height: 380px; }
+  .nav-links.open { max-height: 460px; }
   .nav-links li { width: 100%; padding: 0.45rem 0; }
   .nav-links li:last-child { padding-top: 0.7rem; }
+
+  .skill-row { grid-template-columns: 1fr; gap: 0.25rem; }
 
   .profile-name { font-size: 2.2rem; }
   .avatar { width: 168px; height: 168px; }

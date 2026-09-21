@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prasanjit Dubey</title>
-  <meta name="description" content="Prasanjit Dubey, Ph.D. candidate in Machine Learning at Georgia Tech. Research on federated, communication-constrained learning (LLMs, RAG, distillation, conformal prediction) and optimal multiple testing with fast, scalable algorithms." />
+  <meta name="description" content="Prasanjit Dubey, Ph.D. candidate in Machine Learning at Georgia Tech. Research on multiple hypothesis testing, conformal prediction, anytime-valid inference, and federated learning and knowledge distillation for language models." />
   <meta name="author" content="Prasanjit Dubey" />
-  <meta name="keywords" content="Prasanjit Dubey, machine learning, statistics, federated learning, large language models, LLM swarms, retrieval-augmented generation, RAG, knowledge distillation, probe-logit distillation, conformal prediction, anytime-valid inference, e-processes, communication-constrained learning, multiple hypothesis testing, family-wise error rate, FWER, optimization, scalable algorithms, efficient algorithms, fast algorithms, coordinate descent, elementary symmetric polynomials, Georgia Tech, Xiaoming Huo" />
+  <meta name="keywords" content="Prasanjit Dubey, machine learning, statistics, multiple hypothesis testing, family-wise error rate, FWER, conformal prediction, anytime-valid inference, e-processes, federated learning, knowledge distillation, large language models, LLM swarms, retrieval-augmented generation, RAG, probe-logit distillation, communication-constrained learning, statistical learning theory, optimization, scalable algorithms, elementary symmetric polynomials, Georgia Tech, Xiaoming Huo" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Prasanjit Dubey" />
-  <meta property="og:description" content="Ph.D. candidate in Machine Learning at Georgia Tech: federated, communication-constrained learning (LLMs, RAG, distillation) and optimal multiple testing with fast, scalable algorithms." />
+  <meta property="og:description" content="Ph.D. candidate in Machine Learning at Georgia Tech: multiple hypothesis testing, conformal prediction, anytime-valid inference, and federated learning for language models." />
   <meta property="og:url" content="https://pdubey96.github.io/" />
   <meta property="og:image" content="https://pdubey96.github.io/mypicnov2025.jpg" />
   <meta name="twitter:card" content="summary" />
@@ -52,6 +52,7 @@
       <ul class="nav-links">
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#awards">Awards</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -89,7 +90,7 @@
         <a class="icon-btn" href="https://www.linkedin.com/in/prasanjit-dubey/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a class="icon-btn" href="Prasanjit_Dubey_CV_Aug2026.pdf" target="_blank" rel="noopener" aria-label="Curriculum Vitae" title="Curriculum Vitae">
+        <a class="icon-btn" href="cv.pdf" target="_blank" rel="noopener" aria-label="Curriculum Vitae" title="Curriculum Vitae (PDF)">
           <svg class="icon-stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
         </a>
       </div>
@@ -102,14 +103,15 @@
         fortunate to be advised by
         <a href="https://huo.isye.gatech.edu/" target="_blank" rel="noopener">Prof. Xiaoming Huo</a>.
         My research builds statistical methods with provable guarantees for two
-        intertwined settings: <strong>federated, communication-constrained
-        learning</strong> (distillation and conformal coverage for <strong>large
-        language models</strong> and <strong>LLM swarms</strong> under tight
-        bandwidth budgets) and <strong>optimal multiple hypothesis
-        testing</strong> with <strong>fast, scalable algorithms</strong> for
-        exact error control. A growing part of my work sits at their
-        intersection: error control that stays valid when evidence is distributed
-        across sites or accumulates sequentially over time.
+        intertwined settings: <strong>multiple hypothesis testing</strong> with
+        <strong>fast, scalable algorithms</strong> for exact error control, and
+        <strong>federated, communication-constrained learning</strong>
+        (<strong>knowledge distillation</strong> and <strong>conformal
+        coverage</strong> for <strong>large language models</strong> and
+        <strong>LLM swarms</strong> under tight bandwidth budgets). A growing
+        part of my work sits at their intersection: error control that stays
+        valid when evidence is distributed across sites or accumulates
+        sequentially over time.
       </p>
       <p class="bio">
         I have worked as a quantitative researcher at Bloomberg, AT&amp;T Labs,
@@ -123,20 +125,33 @@
       <h2>Research Interests</h2>
 
       <ul class="topics" aria-label="Research topics">
+        <li>Multiple Hypothesis Testing</li>
+        <li>Conformal Prediction</li>
+        <li>Anytime-Valid Inference</li>
         <li>Federated Learning</li>
+        <li>Knowledge Distillation</li>
         <li>Large Language Models</li>
         <li>LLM Swarms</li>
         <li>Retrieval-Augmented Generation</li>
-        <li>Knowledge Distillation</li>
-        <li>Conformal Prediction</li>
-        <li>Anytime-Valid Inference</li>
-        <li>Communication-Constrained Learning</li>
-        <li>Multiple Hypothesis Testing</li>
+        <li>Statistical Learning Theory</li>
         <li>Family-Wise Error Rate</li>
+        <li>Communication-Constrained Learning</li>
         <li>Optimization</li>
       </ul>
 
       <div class="interests">
+        <article class="interest">
+          <h3>Optimal Multiple Testing</h3>
+          <p>
+            Characterizing and computing the <em>most powerful</em> tests under
+            exact <strong>family-wise error rate (FWER)</strong> control. By
+            describing the error-rate constraints in closed form through
+            <strong>elementary symmetric polynomials</strong>, an intractable
+            combinatorial problem becomes a <strong>fast, scalable algorithm</strong>
+            with provable linear convergence. The same approach extends to
+            block-structured multiplicity (BOOST) and strong-FWER guarantees.
+          </p>
+        </article>
         <article class="interest">
           <h3>Federated and Communication-Constrained Learning</h3>
           <p>
@@ -152,26 +167,14 @@
           </p>
         </article>
         <article class="interest">
-          <h3>Optimal Multiple Testing</h3>
-          <p>
-            Characterizing and computing the <em>most powerful</em> tests under
-            exact <strong>family-wise error rate (FWER)</strong> control. By
-            describing the error-rate constraints in closed form through
-            <strong>elementary symmetric polynomials</strong>, an intractable
-            combinatorial problem becomes a <strong>fast, scalable algorithm</strong>
-            with provable linear convergence. The same approach extends to
-            block-structured multiplicity (BOOST) and strong-FWER guarantees.
-          </p>
-        </article>
-        <article class="interest">
           <h3>Federated and Anytime-Valid Multiple Testing</h3>
           <p>
             Where the two threads above meet: error control that stays valid when
-            evidence <strong>accumulates sequentially over time</strong>
-            (<strong>anytime-valid</strong>, <strong>e-process</strong>-based) or
-            is <strong>federated</strong> across sites that cannot pool raw data,
-            through sequential and distributed extensions of the optimal-FWER
-            theory.
+            evidence is <strong>federated</strong> across sites that cannot pool
+            raw data, or <strong>accumulates sequentially over time</strong>
+            (<strong>anytime-valid</strong>, <strong>e-process</strong>-based). A
+            central question in the federated case is how much each site must
+            <strong>report</strong> for the guarantee to survive aggregation.
           </p>
         </article>
         <article class="interest">
@@ -187,19 +190,93 @@
       </div>
     </section>
 
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li class="edu-item">
+          <div class="exp-head">
+            <span class="exp-role">Ph.D. in Machine Learning</span>
+            <span class="exp-date">Aug 2021 – May 2027 (expected)</span>
+          </div>
+          <div class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</div>
+          <ul class="edu-detail">
+            <li>H. Milton Stewart School of Industrial and Systems Engineering; minor in Mathematics</li>
+            <li>Advisor: <a href="https://huo.isye.gatech.edu/" target="_blank" rel="noopener">Prof. Xiaoming Huo</a></li>
+            <li>GPA 3.85 / 4.00</li>
+          </ul>
+        </li>
+        <li class="edu-item">
+          <div class="exp-head">
+            <span class="exp-role">M.Sc. in Applied Statistics &amp; Informatics</span>
+            <span class="exp-date">2017 – 2019</span>
+          </div>
+          <div class="exp-org">Indian Institute of Technology Bombay · Mumbai, India</div>
+          <ul class="edu-detail">
+            <li>Department of Mathematics · Class Rank 1 of 38 · GPA 8.96 / 10.00</li>
+            <li>Thesis: <em>Financial Data Mining Using Multivariate Copulas</em></li>
+          </ul>
+        </li>
+        <li class="edu-item">
+          <div class="exp-head">
+            <span class="exp-role">B.Sc. in Statistics, First Class Honors</span>
+            <span class="exp-date">2014 – 2017</span>
+          </div>
+          <div class="exp-org">University of Calcutta · Kolkata, India</div>
+          <ul class="edu-detail">
+            <li>Department of Statistics; minor in Mathematics &amp; Computer Science</li>
+            <li>Grade 92.5%</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
     <!-- ============ PUBLICATIONS ============ -->
     <section id="publications" class="section">
       <h2>Publications &amp; Preprints</h2>
       <p class="section-intro">
-        My work centers on two intertwined lines: federated,
-        communication-constrained learning and optimal multiple testing, together
-        with their growing intersection. All papers are joint with my advisor,
-        Xiaoming Huo, except where noted. See
+        My work centers on two intertwined lines: optimal multiple testing and
+        federated, communication-constrained learning, together with their
+        growing intersection. Author order is by contribution, and all papers are
+        joint with my advisor, Xiaoming Huo, except where noted. See
         <a href="https://scholar.google.com/citations?user=jp3epVkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
-        for the latest.
+        or my <a href="cv.pdf" target="_blank" rel="noopener">CV</a> for the latest.
       </p>
 
-      <!-- Group 1: Federated -->
+      <!-- Group 1: Multiple testing -->
+      <h3 class="pub-group">Optimal Multiple Testing</h3>
+      <ol class="pub-list">
+        <li class="pub">
+          <div class="pub-body">
+            <h4 class="pub-title">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</h4>
+            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+            <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">Paper</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-body">
+            <h4 class="pub-title">Most Powerful Tests with Exact Family-Wise Error Rate Control: Necessary Conditions and Fast Computation for General K</h4>
+            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+            <p class="pub-venue"><span class="badge badge-review">Under revision</span> Journal of Computational and Graphical Statistics (JCGS) · 2025</p>
+            <p class="pub-abstract">
+              An efficient algorithm for the most powerful test under exact FWER
+              control for an arbitrary number of exchangeable hypotheses. The
+              power advantage over Bonferroni, Holm, and Hommel grows with the
+              number of hypotheses (an 84% relative gain at K = 12 in the
+              truncated-normal model).
+            </p>
+            <p class="pub-award">★ Invited talk, Optimisation for Statistics and Learning session, INFORMS Annual Meeting, 2025</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2604.10986" target="_blank" rel="noopener">Paper</a>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Group 2: Federated -->
       <h3 class="pub-group">Federated &amp; Communication-Constrained Learning</h3>
       <ol class="pub-list">
         <li class="pub">
@@ -225,7 +302,7 @@
         </li>
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">Federated Language Models under Bandwidth Budgets: Distillation Rates and Conformal Coverage</h4>
+            <h4 class="pub-title">Federated Language Models Under Bandwidth Budgets: Distillation Rates and Conformal Coverage</h4>
             <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
             <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
             <div class="pub-links">
@@ -233,78 +310,33 @@
             </div>
           </div>
         </li>
-      </ol>
-
-      <!-- Group 2: Multiple testing -->
-      <h3 class="pub-group">Optimal Multiple Testing</h3>
-      <ol class="pub-list">
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Optimal Multiple Testing under Family-Wise Error Control: Elementary Symmetric Polynomials and a Scalable Algorithm</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> <em>Biometrika</em> · 2026</p>
-            <p class="pub-abstract">
-              An efficient algorithm for the most powerful test under exact FWER
-              control for an arbitrary number of exchangeable hypotheses. The
-              power advantage over Bonferroni, Holm, and Hommel grows with the
-              number of hypotheses (an 84% relative gain at K = 12 in the
-              truncated-normal model).
-            </p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2604.10986" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Most Powerful Test with Exact Family-Wise Error Rate Control: Necessary Conditions and a Path to Fast Computing</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> Journal of Computational and Graphical Statistics · 2025</p>
-            <p class="pub-award">★ Invited talk, Optimisation for Statistics and Learning session, INFORMS Annual Meeting, 2025</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2512.14131" target="_blank" rel="noopener">Paper</a>
-            </div>
+            <h4 class="pub-title">Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction</h4>
+            <p class="pub-authors"><span class="me">Prasanjit Dubey</span>, Aritra Guha, and Xiaoming Huo</p>
+            <p class="pub-venue"><span class="badge badge-prep">In preparation</span> 2026</p>
           </div>
         </li>
       </ol>
 
       <!-- Group 3: the intersection -->
-      <h3 class="pub-group">Federated and Anytime-Valid Multiple Testing <span class="pub-group-note">(in preparation)</span></h3>
+      <h3 class="pub-group">Federated and Anytime-Valid Multiple Testing</h3>
       <ol class="pub-list">
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">Optimal Multiple Testing under Family-Wise Error Control: Federated Evidence</h4>
+            <h4 class="pub-title">Report Resolution in Federated Multiple Testing under Family-Wise Error Control</h4>
             <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-prep">In preparation</span> 2026</p>
-            <p class="pub-abstract">
-              Power-optimal multiple testing under exact FWER control when the
-              evidence is federated across sites that cannot pool raw data,
-              extending the centralized optimal-FWER theory to the distributed
-              setting.
-            </p>
+            <p class="pub-venue"><span class="badge badge-review">Under review</span> <em>Biometrika</em> · 2026</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2609.19708" target="_blank" rel="noopener">Paper</a>
+            </div>
           </div>
         </li>
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">Anytime-Valid Optimal Multiple Testing</h4>
+            <h4 class="pub-title">Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</h4>
             <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
             <p class="pub-venue"><span class="badge badge-prep">In preparation</span> 2026</p>
-            <p class="pub-abstract">
-              A sequential, anytime-valid extension of optimal FWER multiple
-              testing via elementary symmetric polynomials and e-processes,
-              remaining valid under continuous monitoring of accumulating
-              evidence.
-            </p>
           </div>
         </li>
       </ol>
@@ -327,7 +359,7 @@
           <div class="pub-body">
             <h4 class="pub-title">Generalization Bounds for Magnitude-Based Pruning via Sparse Matrix Sketching</h4>
             <p class="pub-authors">Etash Kumar Guha, <span class="me">Prasanjit Dubey</span>, and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-pub">Poster</span> ICLR 2024 Workshop, Bridging the Gap Between Practice and Theory in Deep Learning</p>
+            <p class="pub-venue"><span class="badge badge-pub">Published</span> ICLR 2024 Workshop on Bridging the Gap Between Practice and Theory in Deep Learning</p>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2305.18789" target="_blank" rel="noopener">Paper</a>
             </div>
@@ -336,25 +368,73 @@
       </ol>
     </section>
 
+    <!-- ============ TALKS ============ -->
+    <section id="talks" class="section">
+      <h2>Invited Talks &amp; Presentations</h2>
+      <ul class="talk-list">
+        <li class="talk">
+          <h3 class="talk-title">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation</h3>
+          <ul class="talk-venues">
+            <li><span class="talk-venue">Poster, Statistics and Trustworthy AI for Cross (X)-Domain Acceleration (STAI-X), Harvard University</span><span class="talk-year">2026</span></li>
+          </ul>
+        </li>
+        <li class="talk">
+          <h3 class="talk-title">Most Powerful Test with Exact Family-Wise Error Rate Control: Necessary Conditions and a Path to Fast Computing</h3>
+          <ul class="talk-venues">
+            <li><span class="talk-venue">Invited talk, Optimisation for Statistics and Learning session, INFORMS Annual Meeting, Atlanta, GA</span><span class="talk-year">2025</span></li>
+            <li><span class="talk-venue">Poster, Georgia Statistics Day, University of Georgia, Athens, GA</span><span class="talk-year">2025</span></li>
+          </ul>
+        </li>
+        <li class="talk">
+          <h3 class="talk-title">LLmFPCA-detect: LLM-powered Multivariate Functional PCA for Anomaly Detection in Sparse Longitudinal Texts</h3>
+          <ul class="talk-venues">
+            <li><span class="talk-venue">Poster, Student Research Showcase, INFORMS Regional Analytics Conference (IRAC), Atlanta, GA</span><span class="talk-year">2025</span></li>
+          </ul>
+          <p class="pub-award">★ 2nd Place Paper Award</p>
+        </li>
+      </ul>
+    </section>
+
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="section">
-      <h2>Experience</h2>
+      <h2>Research &amp; Professional Experience</h2>
       <p class="section-intro">
-        My professional experience spans quantitative finance, risk, and applied
-        AI, where I've built statistical and machine-learning systems in industry.
+        Alongside my dissertation research, I have worked on sponsored research
+        at Georgia Tech and as a quantitative researcher in industry, building
+        statistical and machine-learning systems that shipped to real users.
       </p>
       <ul class="exp-list">
         <li class="exp-item">
           <div class="exp-head">
-            <span class="exp-role">Quant Intern, Quantitative Risk Analytics (Enterprise Products)</span>
+            <span class="exp-role">Graduate Research Assistant, Georgia DOT Sponsored Research</span>
+            <span class="exp-date">Jan – Sep 2026</span>
+          </div>
+          <div class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</div>
+          <p class="exp-desc">
+            Developed a statistical framework establishing how many valid days a
+            traffic-monitoring station needs in a month with incomplete data
+            before its monthly average can be published, and applied it across
+            Georgia's network of 233 continuous count stations. Delivered to
+            transportation planners as the Data-Sufficiency Explorer, an
+            interactive dashboard. PI: Prof. Xiaoming Huo.
+          </p>
+          <div class="pub-links exp-links">
+            <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Code</a>
+          </div>
+        </li>
+        <li class="exp-item">
+          <div class="exp-head">
+            <span class="exp-role">Quant PhD Intern, Quantitative Risk Analytics</span>
             <span class="exp-date">Summer 2025</span>
           </div>
           <div class="exp-org">Bloomberg L.P. · New York, USA</div>
           <p class="exp-desc">
             Built a Kalman-filter hazard-curve model for pricing credit
-            instruments, integrated into Bloomberg Terminal's Credit VaR engine;
-            developed a macro-conditioned credit-rating-migration module and a
-            hybrid correlation model for joint firm-value shocks.
+            instruments from latent Nelson–Siegel factors and macroeconomic
+            covariates, integrated into Bloomberg Terminal's Credit VaR engine;
+            implemented a credit-rating-migration module using macro-conditioned
+            multinomial logit and intensity-based models to simulate obligor- and
+            index-level rating paths.
           </p>
         </li>
         <li class="exp-item">
@@ -362,12 +442,13 @@
             <span class="exp-role">Research Scientist Intern, Data Science &amp; AI Research</span>
             <span class="exp-date">Summer 2024</span>
           </div>
-          <div class="exp-org">AT&amp;T Labs · New Jersey, USA</div>
+          <div class="exp-org">AT&amp;T Labs, Inc. · New Jersey, USA</div>
           <p class="exp-desc">
             Developed a framework integrating large language models with
             multivariate functional data analysis for sparse longitudinal
-            customer-journey text; shipped a production anomaly-detection
-            application (Emotional AI) for behavioral interventions.
+            customer-journey text, now under review at IEEE TPAMI; shipped a
+            production anomaly-detection application (Emotional AI) for
+            behavioral interventions.
           </p>
         </li>
         <li class="exp-item">
@@ -377,10 +458,11 @@
           </div>
           <div class="exp-org">Australia and New Zealand Banking Group (ANZ) · Bengaluru, India</div>
           <p class="exp-desc">
-            Built a production R Shiny stress-testing tool (FRST) and a
-            multivariate financial-ratio analytics suite; led the bank's
-            statistical COVID-19 impact assessment across commercial portfolios
-            for APRA regulatory requirements.
+            Built the Financial Ratio Surveillance Tool (FRST), a production
+            R Shiny stress-testing application forecasting default probabilities
+            and assessing the predictive power of financial ratios; led the
+            bank's statistical COVID-19 impact assessment across commercial
+            portfolios for APRA regulatory requirements.
           </p>
         </li>
         <li class="exp-item">
@@ -390,9 +472,11 @@
           </div>
           <div class="exp-org">Walmart Labs · Bengaluru, India</div>
           <p class="exp-desc">
-            Built cluster-based price-elasticity and regularized ensemble models
-            for category-level demand forecasting, reducing forecast error by
-            42% (MAPE) over the incumbent method.
+            Devised an ensemble of ridge, lasso, and elastic-net models to
+            forecast category-level sales from item-, region-, and
+            covariate-specific price elasticities; a cluster-based
+            (<em>k</em>-means) elasticity model reduced mean absolute percentage
+            error by 42.4% relative to the incumbent method.
           </p>
         </li>
       </ul>
@@ -403,40 +487,69 @@
       <h2>Awards &amp; Honors</h2>
       <ul class="awards-list">
         <li><span class="award-text">2nd Place Paper Award, Student Research Showcase, INFORMS Regional Analytics Conference (IRAC), Atlanta</span><span class="award-year">2025</span></li>
-        <li><span class="award-text">Stewart Topper Fellowship Award, Georgia Tech</span><span class="award-year">2021 – 22</span></li>
-        <li><span class="award-text">Dr. P. V. Sukhatme Memorial Award (M.Sc. Rank 1), IIT Bombay</span><span class="award-year">2019</span></li>
+        <li><span class="award-text">Stewart Topper Fellowship Award, Georgia Tech (first-year Ph.D. academic performance)</span><span class="award-year">2021 – 22</span></li>
+        <li><span class="award-text">Dr. P. V. Sukhatme Memorial Award, IIT Bombay (M.Sc. Rank 1)</span><span class="award-year">2019</span></li>
         <li><span class="award-text">All-India Rank 26, Graduate Aptitude Test in Engineering (GATE), Statistics</span><span class="award-year">2019</span></li>
-        <li><span class="award-text">Pfizer Scholarship (M.Sc. first-year Rank 1)</span><span class="award-year">2018</span></li>
-        <li><span class="award-text">All-India Rank 7, IIT-JAM Mathematical Statistics</span><span class="award-year">2017</span></li>
-        <li><span class="award-text">Swami Asaktananda Award (highest B.Sc. academic distinction)</span><span class="award-year">2017</span></li>
+        <li><span class="award-text">Pfizer Scholarship, IIT Bombay (M.Sc. first-year Rank 1)</span><span class="award-year">2018</span></li>
+        <li><span class="award-text">All-India Rank 7, IIT Joint Admission Test for M.Sc. (IIT JAM), Mathematical Statistics</span><span class="award-year">2017</span></li>
+        <li><span class="award-text">Swami Asaktananda Award, University of Calcutta (highest B.Sc. academic distinction)</span><span class="award-year">2017</span></li>
         <li><span class="award-text">Summer Research Fellowship, Indian Academy of Sciences</span><span class="award-year">2016, 17</span></li>
       </ul>
     </section>
 
     <!-- ============ TEACHING & SERVICE ============ -->
     <section id="service" class="section">
-      <h2>Teaching &amp; Service</h2>
+      <h2>Teaching, Mentoring &amp; Service</h2>
       <div class="service-grid">
         <div class="service-block">
           <h3>Teaching</h3>
-          <p>Teaching Assistant, Georgia Tech (2022 – 2025):</p>
+          <p>Head Teaching Assistant and Teaching Assistant, Georgia Tech ISyE (2021 – 2025):</p>
           <ul>
-            <li>Data Mining &amp; Statistical Learning (graduate, 300+ students)</li>
-            <li>Statistical Modeling &amp; Regression Analysis (graduate, 300+ students)</li>
+            <li><strong>ISyE 7406</strong>, Data Mining &amp; Statistical Learning (graduate, 300+ students). TA: Fall 2024, Spring 2025, Fall 2025 · Instructor: Prof. Xiaoming Huo</li>
+            <li><strong>ISyE 6414</strong>, Statistical Modeling &amp; Regression Analysis (graduate, 300+ students). Head TA: Fall 2022, Spring 2023 · TA: Summer 2022 · Instructor: Prof. Nicoleta Serban</li>
+            <li><strong>ISyE 2027</strong>, Probability with Applications (undergraduate). Student Assistant: Fall 2021, leading tutoring sessions</li>
           </ul>
-        </div>
-        <div class="service-block">
-          <h3>Service</h3>
-          <p>Reviewer for ICLR, ICML, and NeurIPS (2023 – present).</p>
         </div>
         <div class="service-block">
           <h3>Mentoring</h3>
           <ul>
-            <li>Kareena Mehta (Georgia Tech, CS)</li>
-            <li>Kevin Li (Washington University in St. Louis, Finance &amp; Data Science)</li>
+            <li><strong>Kareena Mehta</strong>, undergraduate, Georgia Tech (Computer Science), Summer 2026</li>
+            <li><strong>Kevin Li</strong>, undergraduate, Washington University in St. Louis (Finance &amp; Data Science), Summer 2026 and Fall 2026</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <h3>Service</h3>
+          <p>Conference reviewer (2023 – present):</p>
+          <ul>
+            <li>International Conference on Learning Representations (ICLR)</li>
+            <li>International Conference on Machine Learning (ICML)</li>
+            <li>Conference on Neural Information Processing Systems (NeurIPS)</li>
           </ul>
         </div>
       </div>
+    </section>
+
+    <!-- ============ TECHNICAL SKILLS ============ -->
+    <section id="skills" class="section">
+      <h2>Technical Skills</h2>
+      <dl class="skills-list">
+        <div class="skill-row">
+          <dt>Programming</dt>
+          <dd>Python, R, R Shiny, C++, SQL, MySQL, MATLAB</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Machine Learning</dt>
+          <dd>LLMs, PyTorch, scikit-learn</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Computing &amp; Tools</dt>
+          <dd>High-performance computing (Slurm), GPU computing, Apache Hadoop (MapReduce, Streaming), Git, LaTeX</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Graduate Coursework</dt>
+          <dd>Mathematical Foundations of Machine Learning, High-Dimensional Probability, High-Dimensional Statistics, Statistical Inference, Time Series Analysis, Stochastic Processes, Convex Optimization, Stochastic Optimization, Computational Data Analysis</dd>
+        </div>
+      </dl>
     </section>
 
     <!-- ============ NEWS ============ -->
@@ -444,12 +557,20 @@
       <h2>Recent News</h2>
       <ul class="news-list">
         <li>
+          <span class="news-date">Sep 2026</span>
+          <span class="news-text">New preprint, <em>Report Resolution in Federated Multiple Testing under Family-Wise Error Control</em>, under review at <em>Biometrika</em>.</span>
+        </li>
+        <li>
           <span class="news-date">2026</span>
-          <span class="news-text">Presented <em>Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation</em> at STAI-X, Harvard.</span>
+          <span class="news-text">Delivered the <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Data-Sufficiency Explorer</a> to the Georgia Department of Transportation, covering all 233 continuous count stations statewide.</span>
+        </li>
+        <li>
+          <span class="news-date">2026</span>
+          <span class="news-text">Presented <em>Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation</em> as a poster at STAI-X, Harvard University.</span>
         </li>
         <li>
           <span class="news-date">2025</span>
-          <span class="news-text">2nd Place Paper Award at INFORMS IRAC for <em>LLmFPCA-detect</em>; invited talk at the INFORMS Annual Meeting.</span>
+          <span class="news-text">2nd Place Paper Award at INFORMS IRAC for <em>LLmFPCA-detect</em>; invited talk at the INFORMS Annual Meeting and a poster at Georgia Statistics Day.</span>
         </li>
       </ul>
     </section>
@@ -459,8 +580,7 @@
       <h2>Contact</h2>
       <p class="section-intro">
         The best way to reach me is by email. I'm always glad to talk about
-        federated learning, optimal multiple testing, or potential
-        collaborations.
+        multiple testing, federated learning, or potential collaborations.
       </p>
       <div class="contact-grid">
         <a class="contact-card" href="mailto:pdubey31@gatech.edu">
@@ -475,9 +595,17 @@
           <span class="contact-label">Google Scholar</span>
           <span class="contact-value">View profile</span>
         </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/prasanjit-dubey/" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">in/prasanjit-dubey</span>
+        </a>
         <a class="contact-card" href="https://github.com/pdubey96" target="_blank" rel="noopener">
           <span class="contact-label">GitHub</span>
           <span class="contact-value">@pdubey96</span>
+        </a>
+        <a class="contact-card" href="cv.pdf" target="_blank" rel="noopener">
+          <span class="contact-label">Curriculum Vitae</span>
+          <span class="contact-value">pdubey96.github.io/cv.pdf</span>
         </a>
       </div>
       <p class="contact-address">
