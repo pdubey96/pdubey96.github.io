@@ -222,7 +222,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
   transform: translateY(-2px);
   text-decoration: none;
 }
-.profile-link svg { width: 17px; height: 17px; flex-shrink: 0; }
+/* Sized against the label's cap height, not the font size: at 17px the solid
+   logos out-massed the text. The document icon is line art filling only 16x20
+   of its 24x24 box, so it needs a bigger box to read at the same weight. */
+.profile-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+.profile-link .icon-stroke { width: 16px; height: 16px; }
 
 .profile-email { color: var(--text-soft); margin: 0.2rem 0 0; }
 .profile-email a { color: var(--text-soft); border-bottom: 1px solid var(--border); }
