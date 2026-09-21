@@ -13,7 +13,6 @@ Live at <https://pdubey96.github.io/>.
 | `style.css`  | All styling, including the light/dark theme.            |
 | `script.js`  | Mobile nav, dark-mode toggle, footer year.              |
 | `cv.pdf`     | The CV. **Permanent link; see below.**                  |
-| `Prasanjit_Dubey_CV_Aug2026.pdf` | Stale industry build, kept only so older shared links do not 404. Safe to delete once nobody is using that link. |
 | `mypicnov2025.jpg` | Headshot, shown as the circular avatar.           |
 | `assets/`    | Spare folder for any additional images.                 |
 
@@ -26,7 +25,9 @@ https://pdubey96.github.io/cv.pdf
 ```
 
 Anyone you send that link to keeps getting the **current** CV, forever, because
-every update overwrites the same file. To publish a new version:
+every update overwrites the same file. It is the only CV this site serves: the
+older dated PDF was removed on 2026-09-21, so links to it now 404. To publish a
+new version:
 
 ```bash
 cd ~/Documents/GitHub/Website
