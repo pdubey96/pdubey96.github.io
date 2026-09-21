@@ -193,21 +193,40 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 }
 .profile-loc .pin { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
 
-.profile-icons { display: flex; justify-content: center; gap: 0.8rem; margin: 1.6rem 0 1.3rem; }
-.icon-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
+.profile-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.6rem 0 1.3rem;
+}
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
   background: var(--bg-soft);
   color: var(--text-soft);
-  display: grid;
-  place-items: center;
-  transition: background 0.15s, color 0.15s, transform 0.15s;
+  font-family: var(--sans);
+  font-size: 0.87rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
 }
-.icon-btn:hover { background: var(--accent); color: #fff; transform: translateY(-2px); text-decoration: none; }
-.icon-btn svg { width: 20px; height: 20px; }
+.profile-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.profile-link svg { width: 17px; height: 17px; flex-shrink: 0; }
 
 .profile-email { color: var(--text-soft); margin: 0.2rem 0 0; }
+.profile-email a { color: var(--text-soft); border-bottom: 1px solid var(--border); }
+.profile-email a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
 
 .bio {
   max-width: 64ch;

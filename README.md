@@ -50,7 +50,7 @@ Two caveats worth knowing:
 
 ## Sections
 
-Profile card (photo, name, title, location, social icons, email) · Research
+Profile card (photo, name, title, location, labelled links, email) · Research
 Interests · Education · Publications & Preprints · Invited Talks &
 Presentations · Research & Professional Experience · Awards & Honors ·
 Teaching, Mentoring & Service · Technical Skills · Recent News · Contact.
