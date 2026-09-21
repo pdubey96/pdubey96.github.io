@@ -77,6 +77,24 @@ address, the phone number, and per-course GPAs beyond the summary figures.
 - **Dissertation title and committee**: absent from both the CV and the site;
   standard to list at this stage.
 
+## Cache busting
+
+GitHub Pages serves every file with `cache-control: max-age=600`, and the page
+and its stylesheet are cached independently. Without care you can hold a stale
+`style.css` against current markup for up to ten minutes and conclude a CSS
+change did not deploy.
+
+`index.html` therefore requests its assets with a version string:
+
+```html
+<link rel="stylesheet" href="style.css?v=20260921b" />
+<script src="script.js?v=20260921b"></script>
+```
+
+**Bump that string whenever you change `style.css` or `script.js`** (both to the
+same value; the date plus a letter works). A new query string is a new URL, so
+it cannot be served from cache. If a change still looks missing, `Cmd-Shift-R`.
+
 ## Preview locally
 
 Double-click `index.html`, or serve it:
