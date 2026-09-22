@@ -286,7 +286,26 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 .pub-group-note { font-style: italic; color: var(--text-muted); font-weight: 400; }
 
 .pub-list { list-style: none; margin: 0; padding: 0; }
-.pub { padding: 1.3rem 0; border-bottom: 1px solid var(--border); }
+
+/* Numbered [1]..[n] in a left gutter, as the CV sets them. The counter lives
+   on the section, not the list, so it runs unbroken across the four groups
+   instead of restarting at each heading. */
+#publications { counter-reset: pub; }
+.pub {
+  counter-increment: pub;
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub::before {
+  content: "[" counter(pub) "]";
+  color: var(--text-muted);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  font-variant-numeric: tabular-nums;
+}
 .pub:last-child { border-bottom: 0; }
 .pub-title { font-size: 1.12rem; margin: 0 0 0.35rem; line-height: 1.35; }
 .pub-authors { margin: 0 0 0.3rem; color: var(--text-soft); font-size: 0.95rem; }
@@ -513,6 +532,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
   .nav-links li { width: 100%; padding: 0.45rem 0; }
   .nav-links li:last-child { padding-top: 0.7rem; }
 
+  .pub { grid-template-columns: 1.9rem 1fr; }
   .skill-row { grid-template-columns: 1fr; gap: 0.25rem; }
 
   .profile-name { font-size: 2.2rem; }
