@@ -62,10 +62,10 @@ which is the source of truth. Publications appear in the CV's exact wording,
 status and arXiv links, but are grouped by research line rather than by
 submission status: **Optimal Multiple Testing**, **Federated &
 Communication-Constrained Learning**, **Federated and Anytime-Valid Multiple
-Testing**, and **Statistical Machine Learning**. The two working papers carry an
-"In preparation" badge and no link, on purpose, because they are not on arXiv
-yet. All
-eight arXiv IDs were verified against arxiv.org.
+Testing**, and **Statistical Machine Learning**. Within each group, papers run
+newest first by arXiv date, as on the CV. The working paper sits last in its
+group with an "In preparation" badge and no link, on purpose, because it is not
+on arXiv yet. All nine arXiv IDs were verified against arxiv.org.
 
 Deliberately **not** on the public site, though they are on the CV: the home
 address, the phone number, and per-course GPAs beyond the summary figures.
