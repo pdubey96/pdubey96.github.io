@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News · Prasanjit Dubey</title>
+  <meta name="description" content="Recent news from Prasanjit Dubey: papers, acceptances, talks and awards." />
+  <meta name="author" content="Prasanjit Dubey" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="News · Prasanjit Dubey" />
+  <meta property="og:description" content="Recent news from Prasanjit Dubey: papers, acceptances, talks and awards." />
+  <meta property="og:url" content="https://pdubey96.github.io/news.html" />
+  <meta property="og:image" content="https://pdubey96.github.io/mypicnov2025.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon: "PD" monogram, self-contained -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232a4d7a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='white' text-anchor='middle'%3EPD%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=20260926a" />
+
+  <!-- Set theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The top bar is repeated in all six pages; edit them together. -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Prasanjit Dubey</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html" aria-current="page">News</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="awards.html">Awards &amp; Service</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Recent News</h1>
+
+    <ul class="timeline timeline-compact">
+      <li>
+        <span class="t-date">Sep 2026</span>
+        <div class="t-body news-text"><em>BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</em> accepted at NeurIPS 2026.</div>
+      </li>
+      <li>
+        <span class="t-date">Sep 2026</span>
+        <div class="t-body news-text">New preprint, <em>Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</em>, under review at the <em>Electronic Journal of Statistics</em>.</div>
+      </li>
+      <li>
+        <span class="t-date">Sep 2026</span>
+        <div class="t-body news-text">New preprint, <em>Report Resolution in Federated Multiple Testing under Family-Wise Error Control</em>, under review at <em>Biometrika</em>.</div>
+      </li>
+      <li>
+        <span class="t-date">2026</span>
+        <div class="t-body news-text">Delivered the <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Data-Sufficiency Explorer</a> to the Georgia Department of Transportation, covering all 233 continuous count stations statewide.</div>
+      </li>
+      <li>
+        <span class="t-date">2026</span>
+        <div class="t-body news-text">Presented <em>Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation</em> as a poster at STAI-X, Harvard University.</div>
+      </li>
+      <li>
+        <span class="t-date">2025</span>
+        <div class="t-body news-text">2nd Place Paper Award at INFORMS IRAC for <em>LLmFPCA-detect</em>; invited talk at the INFORMS Annual Meeting and a poster at Georgia Statistics Day.</div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script src="script.js?v=20260926a"></script>
+</body>
+</html>

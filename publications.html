@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications · Prasanjit Dubey</title>
+  <meta name="description" content="Publications and preprints of Prasanjit Dubey: optimal multiple testing, federated and communication-constrained learning, and their intersection." />
+  <meta name="author" content="Prasanjit Dubey" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Publications · Prasanjit Dubey" />
+  <meta property="og:description" content="Publications and preprints of Prasanjit Dubey: optimal multiple testing, federated and communication-constrained learning, and their intersection." />
+  <meta property="og:url" content="https://pdubey96.github.io/publications.html" />
+  <meta property="og:image" content="https://pdubey96.github.io/mypicnov2025.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon: "PD" monogram, self-contained -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232a4d7a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='white' text-anchor='middle'%3EPD%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=20260926a" />
+
+  <!-- Set theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The top bar is repeated in all six pages; edit them together. -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Prasanjit Dubey</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html" aria-current="page">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="awards.html">Awards &amp; Service</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Publications &amp; Preprints</h1>
+
+    <div id="publications">
+      <p class="section-intro">
+        My work centers on two intertwined lines: optimal multiple testing and
+        federated, communication-constrained learning, together with their
+        growing intersection. Author order is by contribution, and all papers are
+        joint with my advisor, Xiaoming Huo, except where noted. See
+        <a href="https://scholar.google.com/citations?user=jp3epVkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
+        or my <a href="cv.pdf" target="_blank" rel="noopener">CV</a> for the latest.
+      </p>
+
+      <!-- Grouped by research line, newest first by arXiv date within each
+           group, as on the CV. The five newest also appear on the home page. -->
+
+      <!-- Group 1: Multiple testing -->
+      <section class="section">
+        <h2>Optimal Multiple Testing</h2>
+        <ol class="pub-list">
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-pub">Accepted</span> NeurIPS · 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Most Powerful Tests with Exact Family-Wise Error Rate Control: Necessary Conditions and Fast Computation for General K</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-review">Under revision</span> Journal of Computational and Graphical Statistics (JCGS) · 2025</p>
+              <p class="pub-abstract">
+                An efficient algorithm for the most powerful test under exact FWER
+                control for an arbitrary number of exchangeable hypotheses. The
+                power advantage over Bonferroni, Holm, and Hommel grows with the
+                number of hypotheses (an 84% relative gain at K = 12 in the
+                truncated-normal model).
+              </p>
+              <p class="pub-award">★ Invited talk, Optimisation for Statistics and Learning session, INFORMS Annual Meeting, 2025</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2604.10986" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Group 2: Federated -->
+      <section class="section">
+        <h2>Federated &amp; Communication-Constrained Learning</h2>
+        <ol class="pub-list">
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation under Heterogeneous Bandwidth Budgets</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-review">Under review</span> Invited submission, Journal of the American Statistical Association (Theory &amp; Methods) · 2026</p>
+              <p class="pub-award">★ Poster presented at STAI-X, Harvard University, 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2605.29642" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Anytime-Valid Federated Conformal RAG for LLM Swarms</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2605.29139" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Federated Language Models Under Bandwidth Budgets: Distillation Rates and Conformal Coverage</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2605.09986" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span>, Aritra Guha, and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-prep">In preparation</span> 2026</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Group 3: the intersection -->
+      <section class="section">
+        <h2>Federated and Anytime-Valid Multiple Testing</h2>
+        <ol class="pub-list">
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-review">Under review</span> Electronic Journal of Statistics · 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2609.27465" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Report Resolution in Federated Multiple Testing under Family-Wise Error Control</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-review">Under review</span> <em>Biometrika</em> · 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2609.19708" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Group 4 -->
+      <section class="section">
+        <h2>Statistical Machine Learning</h2>
+        <ol class="pub-list">
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">LLmFPCA-detect: LLM-powered Multivariate Functional PCA for Anomaly Detection in Sparse Longitudinal Texts</h3>
+              <p class="pub-authors"><span class="me">Prasanjit Dubey</span>, Aritra Guha, Zhengyi Zhou, Qiong Wu, Xiaoming Huo, and Paromita Dubey</p>
+              <p class="pub-venue"><span class="badge badge-review">Under review</span> IEEE TPAMI · 2025</p>
+              <p class="pub-award">★ 2nd Place Paper Award, Student Research Showcase, INFORMS Regional Analytics Conference (IRAC), 2025</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2512.14604" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <div class="pub-body">
+              <h3 class="pub-title">Generalization Bounds for Magnitude-Based Pruning via Sparse Matrix Sketching</h3>
+              <p class="pub-authors">Etash Kumar Guha, <span class="me">Prasanjit Dubey</span>, and Xiaoming Huo</p>
+              <p class="pub-venue"><span class="badge badge-pub">Published</span> ICLR 2024 Workshop on Bridging the Gap Between Practice and Theory in Deep Learning</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2305.18789" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script src="script.js?v=20260926a"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Personal website, Prasanjit Dubey
 
-A single-page academic site built with plain HTML and CSS. No build step, no
+A six-page academic site built with plain HTML and CSS. No build step, no
 dependencies, just open `index.html`.
 
 Live at <https://pdubey96.github.io/>.
@@ -9,9 +9,14 @@ Live at <https://pdubey96.github.io/>.
 
 | File         | What it is                                              |
 |--------------|---------------------------------------------------------|
-| `index.html` | All page content.                                       |
+| `index.html` | Home: profile, bio, interests, latest papers, experience, education, skills. |
+| `research.html` | The four research lines, each with its papers.       |
+| `publications.html` | The full, numbered publication list.             |
+| `news.html`  | Recent news.                                            |
+| `talks.html` | Invited talks and presentations.                        |
+| `awards.html` | Awards & honors; teaching, mentoring and service.      |
 | `style.css`  | All styling, including the light/dark theme.            |
-| `script.js`  | Mobile nav, dark-mode toggle, footer year.              |
+| `script.js`  | Dark-mode toggle, footer year.                          |
 | `cv.pdf`     | The CV. **Permanent link; see below.**                  |
 | `mypicnov2025.jpg` | Headshot, shown as the circular avatar.           |
 | `assets/`    | Spare folder for any additional images.                 |
@@ -48,14 +53,35 @@ Two caveats worth knowing:
 - **Deploy lag.** The new PDF is live roughly a minute after `git push`, once
   the Pages build finishes.
 
-## Sections
+## Pages
 
-Profile card (photo, name, title, location, labelled links, email) · Research
-Interests · Education · Publications & Preprints · Invited Talks &
-Presentations · Research & Professional Experience · Awards & Honors ·
-Teaching, Mentoring & Service · Technical Skills · Recent News · Contact.
+The layout follows <https://hamedkhosravi99.github.io/>: a top bar on every
+page, a home page that summarizes, and the detail on pages of its own.
 
-Every section of the academic CV has a counterpart here, in the CV's own order.
+- **Home** (`index.html`): photo beside name, title, affiliation and links
+  (email, Scholar, GitHub, LinkedIn, CV) · bio · contact callout with both
+  email addresses · Research Interests chips · Latest Papers · Research &
+  Professional Experience · Education · Technical Skills.
+- **Research**: each research line's description and its papers.
+- **Publications**: Publications & Preprints, numbered `[1]`–`[10]`.
+- **News** · **Talks** · **Awards & Service** (Awards & Honors; Teaching,
+  Mentoring & Service).
+- **CV** in the top bar opens `cv.pdf`.
+
+Every section of the academic CV has a counterpart on one of the pages.
+
+Things that are repeated, and so must be edited in more than one place:
+
+- **The top bar** is copied into all six pages. Edit them together; only the
+  `aria-current="page"` attribute moves.
+- **Latest Papers** on Home repeats the five newest entries of
+  `publications.html` by arXiv date. When a paper is posted or its status
+  changes, update both.
+- **Research** lists each paper's title and link again, grouped the same way.
+
+Old links to sections of the single-page site (`/#publications`, `/#talks`,
+`/#news`, `/#awards`, `/#service`) are forwarded to the new pages by a script in
+the head of `index.html`.
 
 Content is kept in sync with `~/Documents/GitHub/CV/academic/Prasanjit_Dubey_Academic_CV.tex`,
 which is the source of truth. Publications appear in the CV's exact wording,
@@ -84,15 +110,15 @@ and its stylesheet are cached independently. Without care you can hold a stale
 `style.css` against current markup for up to ten minutes and conclude a CSS
 change did not deploy.
 
-`index.html` therefore requests its assets with a version string:
+Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20260921b" />
-<script src="script.js?v=20260921b"></script>
+<link rel="stylesheet" href="style.css?v=20260926a" />
+<script src="script.js?v=20260926a"></script>
 ```
 
-**Bump that string whenever you change `style.css` or `script.js`** (both to the
-same value; the date plus a letter works). A new query string is a new URL, so
+**Bump that string whenever you change `style.css` or `script.js`**, in all six
+pages and both to the same value (the date plus a letter works). A new query string is a new URL, so
 it cannot be served from cache. If a change still looks missing, `Cmd-Shift-R`.
 
 ## Preview locally

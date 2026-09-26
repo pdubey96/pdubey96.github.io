@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research · Prasanjit Dubey</title>
+  <meta name="description" content="Research of Prasanjit Dubey: optimal multiple testing, federated and communication-constrained learning, federated and anytime-valid multiple testing, and statistical machine learning." />
+  <meta name="author" content="Prasanjit Dubey" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Research · Prasanjit Dubey" />
+  <meta property="og:description" content="Research of Prasanjit Dubey: optimal multiple testing, federated and communication-constrained learning, federated and anytime-valid multiple testing, and statistical machine learning." />
+  <meta property="og:url" content="https://pdubey96.github.io/research.html" />
+  <meta property="og:image" content="https://pdubey96.github.io/mypicnov2025.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon: "PD" monogram, self-contained -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232a4d7a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='white' text-anchor='middle'%3EPD%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=20260926a" />
+
+  <!-- Set theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The top bar is repeated in all six pages; edit them together. -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Prasanjit Dubey</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="awards.html">Awards &amp; Service</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Research</h1>
+    <p class="note">Each line of work with its papers; full entries are on the <a href="publications.html">Publications</a> page.</p>
+
+    <section id="multiple-testing" class="section thread">
+      <h2>Optimal Multiple Testing</h2>
+      <p>
+        Characterizing and computing the <em>most powerful</em> tests under
+        exact <strong>family-wise error rate (FWER)</strong> control. By
+        describing the error-rate constraints in closed form through
+        <strong>elementary symmetric polynomials</strong>, an intractable
+        combinatorial problem becomes a <strong>fast, scalable algorithm</strong>
+        with provable linear convergence. The same approach extends to
+        block-structured multiplicity (BOOST) and strong-FWER guarantees.
+      </p>
+      <div class="row">
+        <span class="row-label">Papers</span>
+        <ul class="thread-papers">
+          <li><a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</a></li>
+          <li><a href="https://arxiv.org/abs/2604.10986" target="_blank" rel="noopener">Most Powerful Tests with Exact Family-Wise Error Rate Control: Necessary Conditions and Fast Computation for General K</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="federated" class="section thread">
+      <h2>Federated and Communication-Constrained Learning</h2>
+      <p>
+        Statistical learning and inference when data and models are
+        distributed across nodes and <em>communication is the bottleneck</em>.
+        This includes <strong>federated probe-logit distillation</strong>
+        with matching minimax rates and optimal bandwidth allocation, and
+        <strong>anytime-valid conformal prediction</strong> that gives
+        distribution-free coverage guarantees for <strong>federated language
+        models</strong> and <strong>retrieval-augmented generation (RAG)</strong>
+        across <strong>LLM swarms</strong>, making bandwidth a first-class
+        statistical parameter.
+      </p>
+      <div class="row">
+        <span class="row-label">Papers</span>
+        <ul class="thread-papers">
+          <li><a href="https://arxiv.org/abs/2605.29642" target="_blank" rel="noopener">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation under Heterogeneous Bandwidth Budgets</a></li>
+          <li><a href="https://arxiv.org/abs/2605.29139" target="_blank" rel="noopener">Anytime-Valid Federated Conformal RAG for LLM Swarms</a></li>
+          <li><a href="https://arxiv.org/abs/2605.09986" target="_blank" rel="noopener">Federated Language Models Under Bandwidth Budgets: Distillation Rates and Conformal Coverage</a></li>
+          <li>Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction <span class="muted">(in preparation)</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="intersection" class="section thread">
+      <h2>Federated and Anytime-Valid Multiple Testing</h2>
+      <p>
+        Where the two threads above meet: error control that stays valid when
+        evidence is <strong>federated</strong> across sites that cannot pool
+        raw data, or <strong>accumulates sequentially over time</strong>
+        (<strong>anytime-valid</strong>, <strong>e-process</strong>-based). A
+        central question in the federated case is how much each site must
+        <strong>report</strong> for the guarantee to survive aggregation.
+      </p>
+      <div class="row">
+        <span class="row-label">Papers</span>
+        <ul class="thread-papers">
+          <li><a href="https://arxiv.org/abs/2609.27465" target="_blank" rel="noopener">Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</a></li>
+          <li><a href="https://arxiv.org/abs/2609.19708" target="_blank" rel="noopener">Report Resolution in Federated Multiple Testing under Family-Wise Error Control</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="statistical-ml" class="section thread">
+      <h2>Statistical Machine Learning</h2>
+      <p>
+        Broader methodological and theoretical questions in modern machine
+        learning: from <strong>generalization bounds</strong> for compressed
+        and <strong>pruned</strong> neural networks to <strong>LLM-powered
+        functional data analysis</strong> for <strong>anomaly detection</strong>
+        in sparse, longitudinal text.
+      </p>
+      <div class="row">
+        <span class="row-label">Papers</span>
+        <ul class="thread-papers">
+          <li><a href="https://arxiv.org/abs/2512.14604" target="_blank" rel="noopener">LLmFPCA-detect: LLM-powered Multivariate Functional PCA for Anomaly Detection in Sparse Longitudinal Texts</a></li>
+          <li><a href="https://arxiv.org/abs/2305.18789" target="_blank" rel="noopener">Generalization Bounds for Magnitude-Based Pruning via Sparse Matrix Sketching</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script src="script.js?v=20260926a"></script>
+</body>
+</html>

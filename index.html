@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20260921c" />
+  <link rel="stylesheet" href="style.css?v=20260926a" />
 
   <!-- Set theme before paint to avoid a flash -->
   <script>
@@ -38,65 +38,79 @@
       } catch (e) {}
     })();
   </script>
+
+  <!-- These sections moved to pages of their own; keep old links such as
+       /#publications working by sending them on before anything renders. -->
+  <script>
+    (function () {
+      var moved = {
+        "#publications": "publications.html",
+        "#talks": "talks.html",
+        "#news": "news.html",
+        "#awards": "awards.html",
+        "#service": "awards.html#service"
+      };
+      if (moved[location.hash]) location.replace(moved[location.hash]);
+    })();
+  </script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- The top bar is repeated in all six pages; edit them together. -->
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <a class="nav-brand" href="#top">Prasanjit Dubey</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="nav-brand" href="index.html">Prasanjit Dubey</a>
       <ul class="nav-links">
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#talks">Talks</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <span class="theme-toggle-icon" aria-hidden="true"></span>
-          </button>
-        </li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="awards.html">Awards &amp; Service</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
       </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
     </nav>
   </header>
 
   <main id="main">
-    <span id="top"></span>
 
-    <!-- ============ PROFILE CARD ============ -->
-    <section id="about" class="profile">
-      <img class="avatar" src="mypicnov2025.jpg" alt="Prasanjit Dubey" width="200" height="200" />
-      <h1 class="profile-name">Prasanjit Dubey</h1>
-      <p class="profile-title">PhD Candidate, Machine Learning · Graduating May 2027</p>
-      <p class="profile-affil">H. Milton Stewart School of Industrial and Systems Engineering</p>
-      <p class="profile-affil">Georgia Institute of Technology</p>
-      <p class="profile-loc">
-        <svg class="pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-        Atlanta, GA, USA
-      </p>
-
-      <div class="profile-links">
-        <a class="profile-link" href="https://scholar.google.com/citations?user=jp3epVkAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-        <span>Google Scholar</span></a>
-        <a class="profile-link" href="https://github.com/pdubey96" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        <span>GitHub</span></a>
-        <a class="profile-link" href="https://www.linkedin.com/in/prasanjit-dubey/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        <span>LinkedIn</span></a>
-        <a class="profile-link" href="cv.pdf" target="_blank" rel="noopener">
-          <svg class="icon-stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-        <span>CV (PDF)</span></a>
+    <!-- ============ IDENTITY ============ -->
+    <section id="about" class="hero">
+      <img class="avatar" src="mypicnov2025.jpg" alt="Prasanjit Dubey" width="150" height="150" />
+      <div class="hero-text">
+        <h1 class="hero-name">Prasanjit Dubey</h1>
+        <p class="hero-title">PhD Candidate, Machine Learning · Graduating May 2027</p>
+        <p class="hero-affil">
+          H. Milton Stewart School of Industrial and Systems Engineering<br />
+          Georgia Institute of Technology · Atlanta,&nbsp;GA,&nbsp;USA
+        </p>
+        <ul class="hero-links">
+          <li><a href="mailto:dubey.prasanjit@gmail.com">
+            <svg class="icon-stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>dubey.prasanjit@gmail.com</span></a></li>
+          <li><a href="https://scholar.google.com/citations?user=jp3epVkAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            <span>Google Scholar</span></a></li>
+          <li><a href="https://github.com/pdubey96" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span>GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/prasanjit-dubey/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span></a></li>
+          <li><a href="cv.pdf" target="_blank" rel="noopener">
+            <svg class="icon-stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+            <span>CV (PDF)</span></a></li>
+        </ul>
       </div>
+    </section>
 
-      <p class="profile-email"><a href="mailto:dubey.prasanjit@gmail.com">dubey.prasanjit@gmail.com</a></p>
-
+    <!-- ============ ABOUT ============ -->
+    <section class="section">
       <p class="bio">
         I am a Ph.D. candidate in Machine Learning at Georgia Tech's H. Milton
         Stewart School of Industrial &amp; Systems Engineering, where I am
@@ -118,12 +132,18 @@
         ANZ, and Walmart. I hold an M.Sc. in Applied Statistics from IIT Bombay
         (Rank 1) and a B.Sc. in Statistics from the University of Calcutta.
       </p>
+      <p id="contact" class="callout">
+        The best way to reach me is by email, at
+        <a href="mailto:dubey.prasanjit@gmail.com">dubey.prasanjit@gmail.com</a>
+        or <a href="mailto:pdubey31@gatech.edu">pdubey31@gatech.edu</a>. I'm
+        always glad to talk about multiple testing, federated learning, or
+        potential collaborations.
+      </p>
     </section>
 
     <!-- ============ RESEARCH INTERESTS ============ -->
     <section id="research" class="section">
       <h2>Research Interests</h2>
-
       <ul class="topics" aria-label="Research topics">
         <li>Multiple Hypothesis Testing</li>
         <li>Conformal Prediction</li>
@@ -138,193 +158,19 @@
         <li>Communication-Constrained Learning</li>
         <li>Optimization</li>
       </ul>
-
-      <div class="interests">
-        <article class="interest">
-          <h3>Optimal Multiple Testing</h3>
-          <p>
-            Characterizing and computing the <em>most powerful</em> tests under
-            exact <strong>family-wise error rate (FWER)</strong> control. By
-            describing the error-rate constraints in closed form through
-            <strong>elementary symmetric polynomials</strong>, an intractable
-            combinatorial problem becomes a <strong>fast, scalable algorithm</strong>
-            with provable linear convergence. The same approach extends to
-            block-structured multiplicity (BOOST) and strong-FWER guarantees.
-          </p>
-        </article>
-        <article class="interest">
-          <h3>Federated and Communication-Constrained Learning</h3>
-          <p>
-            Statistical learning and inference when data and models are
-            distributed across nodes and <em>communication is the bottleneck</em>.
-            This includes <strong>federated probe-logit distillation</strong>
-            with matching minimax rates and optimal bandwidth allocation, and
-            <strong>anytime-valid conformal prediction</strong> that gives
-            distribution-free coverage guarantees for <strong>federated language
-            models</strong> and <strong>retrieval-augmented generation (RAG)</strong>
-            across <strong>LLM swarms</strong>, making bandwidth a first-class
-            statistical parameter.
-          </p>
-        </article>
-        <article class="interest">
-          <h3>Federated and Anytime-Valid Multiple Testing</h3>
-          <p>
-            Where the two threads above meet: error control that stays valid when
-            evidence is <strong>federated</strong> across sites that cannot pool
-            raw data, or <strong>accumulates sequentially over time</strong>
-            (<strong>anytime-valid</strong>, <strong>e-process</strong>-based). A
-            central question in the federated case is how much each site must
-            <strong>report</strong> for the guarantee to survive aggregation.
-          </p>
-        </article>
-        <article class="interest">
-          <h3>Statistical Machine Learning</h3>
-          <p>
-            Broader methodological and theoretical questions in modern machine
-            learning: from <strong>generalization bounds</strong> for compressed
-            and <strong>pruned</strong> neural networks to <strong>LLM-powered
-            functional data analysis</strong> for <strong>anomaly detection</strong>
-            in sparse, longitudinal text.
-          </p>
-        </article>
-      </div>
+      <p class="more"><a href="research.html">More on the four research lines →</a></p>
     </section>
 
-    <!-- ============ EDUCATION ============ -->
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <ul class="edu-list">
-        <li class="edu-item">
-          <div class="exp-head">
-            <span class="exp-role">Ph.D. in Machine Learning</span>
-            <span class="exp-date">Aug 2021 – May 2027 (expected)</span>
-          </div>
-          <div class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</div>
-          <ul class="edu-detail">
-            <li>H. Milton Stewart School of Industrial and Systems Engineering; minor in Mathematics</li>
-            <li>Advisor: <a href="https://huo.isye.gatech.edu/" target="_blank" rel="noopener">Prof. Xiaoming Huo</a></li>
-            <li>GPA 3.85 / 4.00</li>
-          </ul>
-        </li>
-        <li class="edu-item">
-          <div class="exp-head">
-            <span class="exp-role">M.Sc. in Applied Statistics &amp; Informatics</span>
-            <span class="exp-date">2017 – 2019</span>
-          </div>
-          <div class="exp-org">Indian Institute of Technology Bombay · Mumbai, India</div>
-          <ul class="edu-detail">
-            <li>Department of Mathematics · Class Rank 1 of 38 · GPA 8.96 / 10.00</li>
-            <li>Thesis: <em>Financial Data Mining Using Multivariate Copulas</em></li>
-          </ul>
-        </li>
-        <li class="edu-item">
-          <div class="exp-head">
-            <span class="exp-role">B.Sc. in Statistics, First Class Honors</span>
-            <span class="exp-date">2014 – 2017</span>
-          </div>
-          <div class="exp-org">University of Calcutta · Kolkata, India</div>
-          <ul class="edu-detail">
-            <li>Department of Statistics; minor in Mathematics &amp; Computer Science</li>
-            <li>Grade 92.5%</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ============ PUBLICATIONS ============ -->
-    <section id="publications" class="section">
-      <h2>Publications &amp; Preprints</h2>
-      <p class="section-intro">
-        My work centers on two intertwined lines: optimal multiple testing and
-        federated, communication-constrained learning, together with their
-        growing intersection. Author order is by contribution, and all papers are
-        joint with my advisor, Xiaoming Huo, except where noted. See
-        <a href="https://scholar.google.com/citations?user=jp3epVkAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
-        or my <a href="cv.pdf" target="_blank" rel="noopener">CV</a> for the latest.
-      </p>
-
-      <!-- Group 1: Multiple testing -->
-      <h3 class="pub-group">Optimal Multiple Testing</h3>
-      <ol class="pub-list">
+    <!-- ============ LATEST PAPERS ============ -->
+    <!-- The five newest entries of publications.html, by arXiv date. When a
+         paper is added or its status changes, update both pages. -->
+    <section id="latest" class="section">
+      <h2>Latest Papers</h2>
+      <p class="note">The five most recent. <a href="publications.html">All publications →</a></p>
+      <ol class="pub-list pub-list-plain">
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-pub">Accepted</span> NeurIPS · 2026</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Most Powerful Tests with Exact Family-Wise Error Rate Control: Necessary Conditions and Fast Computation for General K</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under revision</span> Journal of Computational and Graphical Statistics (JCGS) · 2025</p>
-            <p class="pub-abstract">
-              An efficient algorithm for the most powerful test under exact FWER
-              control for an arbitrary number of exchangeable hypotheses. The
-              power advantage over Bonferroni, Holm, and Hommel grows with the
-              number of hypotheses (an 84% relative gain at K = 12 in the
-              truncated-normal model).
-            </p>
-            <p class="pub-award">★ Invited talk, Optimisation for Statistics and Learning session, INFORMS Annual Meeting, 2025</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2604.10986" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-      </ol>
-
-      <!-- Group 2: Federated -->
-      <h3 class="pub-group">Federated &amp; Communication-Constrained Learning</h3>
-      <ol class="pub-list">
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation under Heterogeneous Bandwidth Budgets</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> Invited submission, Journal of the American Statistical Association (Theory &amp; Methods) · 2026</p>
-            <p class="pub-award">★ Poster presented at STAI-X, Harvard University, 2026</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2605.29642" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Anytime-Valid Federated Conformal RAG for LLM Swarms</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2605.29139" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Federated Language Models Under Bandwidth Budgets: Distillation Rates and Conformal Coverage</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2605.09986" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span>, Aritra Guha, and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-prep">In preparation</span> 2026</p>
-          </div>
-        </li>
-      </ol>
-
-      <!-- Group 3: the intersection -->
-      <h3 class="pub-group">Federated and Anytime-Valid Multiple Testing</h3>
-      <ol class="pub-list">
-        <li class="pub">
-          <div class="pub-body">
-            <h4 class="pub-title">Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</h4>
+            <h3 class="pub-title">Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</h3>
             <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
             <p class="pub-venue"><span class="badge badge-review">Under review</span> Electronic Journal of Statistics · 2026</p>
             <div class="pub-links">
@@ -334,7 +180,7 @@
         </li>
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">Report Resolution in Federated Multiple Testing under Family-Wise Error Control</h4>
+            <h3 class="pub-title">Report Resolution in Federated Multiple Testing under Family-Wise Error Control</h3>
             <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
             <p class="pub-venue"><span class="badge badge-review">Under review</span> <em>Biometrika</em> · 2026</p>
             <div class="pub-links">
@@ -342,60 +188,37 @@
             </div>
           </div>
         </li>
-      </ol>
-
-      <!-- Group 4 -->
-      <h3 class="pub-group">Statistical Machine Learning</h3>
-      <ol class="pub-list">
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">LLmFPCA-detect: LLM-powered Multivariate Functional PCA for Anomaly Detection in Sparse Longitudinal Texts</h4>
-            <p class="pub-authors"><span class="me">Prasanjit Dubey</span>, Aritra Guha, Zhengyi Zhou, Qiong Wu, Xiaoming Huo, and Paromita Dubey</p>
-            <p class="pub-venue"><span class="badge badge-review">Under review</span> IEEE TPAMI · 2025</p>
-            <p class="pub-award">★ 2nd Place Paper Award, Student Research Showcase, INFORMS Regional Analytics Conference (IRAC), 2025</p>
+            <h3 class="pub-title">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation under Heterogeneous Bandwidth Budgets</h3>
+            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+            <p class="pub-venue"><span class="badge badge-review">Under review</span> Invited submission, Journal of the American Statistical Association (Theory &amp; Methods) · 2026</p>
             <div class="pub-links">
-              <a href="https://arxiv.org/abs/2512.14604" target="_blank" rel="noopener">Paper</a>
+              <a href="https://arxiv.org/abs/2605.29642" target="_blank" rel="noopener">Paper</a>
             </div>
           </div>
         </li>
         <li class="pub">
           <div class="pub-body">
-            <h4 class="pub-title">Generalization Bounds for Magnitude-Based Pruning via Sparse Matrix Sketching</h4>
-            <p class="pub-authors">Etash Kumar Guha, <span class="me">Prasanjit Dubey</span>, and Xiaoming Huo</p>
-            <p class="pub-venue"><span class="badge badge-pub">Published</span> ICLR 2024 Workshop on Bridging the Gap Between Practice and Theory in Deep Learning</p>
+            <h3 class="pub-title">Anytime-Valid Federated Conformal RAG for LLM Swarms</h3>
+            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+            <p class="pub-venue"><span class="badge badge-review">Under review</span> NeurIPS · 2026</p>
             <div class="pub-links">
-              <a href="https://arxiv.org/abs/2305.18789" target="_blank" rel="noopener">Paper</a>
+              <a href="https://arxiv.org/abs/2605.29139" target="_blank" rel="noopener">Paper</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-body">
+            <h3 class="pub-title">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</h3>
+            <p class="pub-authors"><span class="me">Prasanjit Dubey</span> and Xiaoming Huo</p>
+            <p class="pub-venue"><span class="badge badge-pub">Accepted</span> NeurIPS · 2026</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">Paper</a>
             </div>
           </div>
         </li>
       </ol>
-    </section>
-
-    <!-- ============ TALKS ============ -->
-    <section id="talks" class="section">
-      <h2>Invited Talks &amp; Presentations</h2>
-      <ul class="talk-list">
-        <li class="talk">
-          <h3 class="talk-title">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation</h3>
-          <ul class="talk-venues">
-            <li><span class="talk-venue">Poster, Statistics and Trustworthy AI for Cross (X)-Domain Acceleration (STAI-X), Harvard University</span><span class="talk-year">2026</span></li>
-          </ul>
-        </li>
-        <li class="talk">
-          <h3 class="talk-title">Most Powerful Test with Exact Family-Wise Error Rate Control: Necessary Conditions and a Path to Fast Computing</h3>
-          <ul class="talk-venues">
-            <li><span class="talk-venue">Invited talk, Optimisation for Statistics and Learning session, INFORMS Annual Meeting, Atlanta, GA</span><span class="talk-year">2025</span></li>
-            <li><span class="talk-venue">Poster, Georgia Statistics Day, University of Georgia, Athens, GA</span><span class="talk-year">2025</span></li>
-          </ul>
-        </li>
-        <li class="talk">
-          <h3 class="talk-title">LLmFPCA-detect: LLM-powered Multivariate Functional PCA for Anomaly Detection in Sparse Longitudinal Texts</h3>
-          <ul class="talk-venues">
-            <li><span class="talk-venue">Poster, Student Research Showcase, INFORMS Regional Analytics Conference (IRAC), Atlanta, GA</span><span class="talk-year">2025</span></li>
-          </ul>
-          <p class="pub-award">★ 2nd Place Paper Award</p>
-        </li>
-      </ul>
     </section>
 
     <!-- ============ EXPERIENCE ============ -->
@@ -406,130 +229,124 @@
         at Georgia Tech and as a quantitative researcher in industry, building
         statistical and machine-learning systems that shipped to real users.
       </p>
-      <ul class="exp-list">
-        <li class="exp-item">
-          <div class="exp-head">
-            <span class="exp-role">Graduate Research Assistant, Georgia DOT Sponsored Research</span>
-            <span class="exp-date">Jan – Sep 2026</span>
-          </div>
-          <div class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</div>
-          <p class="exp-desc">
-            Developed a statistical framework establishing how many valid days a
-            traffic-monitoring station needs in a month with incomplete data
-            before its monthly average can be published, and applied it across
-            Georgia's network of 233 continuous count stations. Delivered to
-            transportation planners as the Data-Sufficiency Explorer, an
-            interactive dashboard. PI: Prof. Xiaoming Huo.
-          </p>
-          <div class="pub-links exp-links">
-            <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Code</a>
+      <ul class="timeline">
+        <li>
+          <span class="t-date">Jan – Sep 2026</span>
+          <div class="t-body">
+            <p class="exp-role">Graduate Research Assistant, Georgia DOT Sponsored Research</p>
+            <p class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</p>
+            <p class="exp-desc">
+              Developed a statistical framework establishing how many valid days a
+              traffic-monitoring station needs in a month with incomplete data
+              before its monthly average can be published, and applied it across
+              Georgia's network of 233 continuous count stations. Delivered to
+              transportation planners as the Data-Sufficiency Explorer, an
+              interactive dashboard. PI: Prof. Xiaoming Huo.
+            </p>
+            <div class="pub-links exp-links">
+              <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Code</a>
+            </div>
           </div>
         </li>
-        <li class="exp-item">
-          <div class="exp-head">
-            <span class="exp-role">Quant PhD Intern, Quantitative Risk Analytics</span>
-            <span class="exp-date">Summer 2025</span>
+        <li>
+          <span class="t-date">Summer 2025</span>
+          <div class="t-body">
+            <p class="exp-role">Quant PhD Intern, Quantitative Risk Analytics</p>
+            <p class="exp-org">Bloomberg L.P. · New York, USA</p>
+            <p class="exp-desc">
+              Built a Kalman-filter hazard-curve model for pricing credit
+              instruments from latent Nelson–Siegel factors and macroeconomic
+              covariates, integrated into Bloomberg Terminal's Credit VaR engine;
+              implemented a credit-rating-migration module using macro-conditioned
+              multinomial logit and intensity-based models to simulate obligor- and
+              index-level rating paths.
+            </p>
           </div>
-          <div class="exp-org">Bloomberg L.P. · New York, USA</div>
-          <p class="exp-desc">
-            Built a Kalman-filter hazard-curve model for pricing credit
-            instruments from latent Nelson–Siegel factors and macroeconomic
-            covariates, integrated into Bloomberg Terminal's Credit VaR engine;
-            implemented a credit-rating-migration module using macro-conditioned
-            multinomial logit and intensity-based models to simulate obligor- and
-            index-level rating paths.
-          </p>
         </li>
-        <li class="exp-item">
-          <div class="exp-head">
-            <span class="exp-role">Research Scientist Intern, Data Science &amp; AI Research</span>
-            <span class="exp-date">Summer 2024</span>
+        <li>
+          <span class="t-date">Summer 2024</span>
+          <div class="t-body">
+            <p class="exp-role">Research Scientist Intern, Data Science &amp; AI Research</p>
+            <p class="exp-org">AT&amp;T Labs, Inc. · New Jersey, USA</p>
+            <p class="exp-desc">
+              Developed a framework integrating large language models with
+              multivariate functional data analysis for sparse longitudinal
+              customer-journey text, now under review at IEEE TPAMI; shipped a
+              production anomaly-detection application (Emotional AI) for
+              behavioral interventions.
+            </p>
           </div>
-          <div class="exp-org">AT&amp;T Labs, Inc. · New Jersey, USA</div>
-          <p class="exp-desc">
-            Developed a framework integrating large language models with
-            multivariate functional data analysis for sparse longitudinal
-            customer-journey text, now under review at IEEE TPAMI; shipped a
-            production anomaly-detection application (Emotional AI) for
-            behavioral interventions.
-          </p>
         </li>
-        <li class="exp-item">
-          <div class="exp-head">
-            <span class="exp-role">Senior Quantitative Analyst, Wholesale Credit Risk Modeling</span>
-            <span class="exp-date">2019 – 2021</span>
+        <li>
+          <span class="t-date">2019 – 2021</span>
+          <div class="t-body">
+            <p class="exp-role">Senior Quantitative Analyst, Wholesale Credit Risk Modeling</p>
+            <p class="exp-org">Australia and New Zealand Banking Group (ANZ) · Bengaluru, India</p>
+            <p class="exp-desc">
+              Built the Financial Ratio Surveillance Tool (FRST), a production
+              R Shiny stress-testing application forecasting default probabilities
+              and assessing the predictive power of financial ratios; led the
+              bank's statistical COVID-19 impact assessment across commercial
+              portfolios for APRA regulatory requirements.
+            </p>
           </div>
-          <div class="exp-org">Australia and New Zealand Banking Group (ANZ) · Bengaluru, India</div>
-          <p class="exp-desc">
-            Built the Financial Ratio Surveillance Tool (FRST), a production
-            R Shiny stress-testing application forecasting default probabilities
-            and assessing the predictive power of financial ratios; led the
-            bank's statistical COVID-19 impact assessment across commercial
-            portfolios for APRA regulatory requirements.
-          </p>
         </li>
-        <li class="exp-item">
-          <div class="exp-head">
-            <span class="exp-role">Research Intern, Data Science (International Pricing &amp; Demand Forecasting)</span>
-            <span class="exp-date">Summer 2018</span>
+        <li>
+          <span class="t-date">Summer 2018</span>
+          <div class="t-body">
+            <p class="exp-role">Research Intern, Data Science (International Pricing &amp; Demand Forecasting)</p>
+            <p class="exp-org">Walmart Labs · Bengaluru, India</p>
+            <p class="exp-desc">
+              Devised an ensemble of ridge, lasso, and elastic-net models to
+              forecast category-level sales from item-, region-, and
+              covariate-specific price elasticities; a cluster-based
+              (<em>k</em>-means) elasticity model reduced mean absolute percentage
+              error by 42.4% relative to the incumbent method.
+            </p>
           </div>
-          <div class="exp-org">Walmart Labs · Bengaluru, India</div>
-          <p class="exp-desc">
-            Devised an ensemble of ridge, lasso, and elastic-net models to
-            forecast category-level sales from item-, region-, and
-            covariate-specific price elasticities; a cluster-based
-            (<em>k</em>-means) elasticity model reduced mean absolute percentage
-            error by 42.4% relative to the incumbent method.
-          </p>
         </li>
       </ul>
     </section>
 
-    <!-- ============ AWARDS ============ -->
-    <section id="awards" class="section">
-      <h2>Awards &amp; Honors</h2>
-      <ul class="awards-list">
-        <li><span class="award-text">2nd Place Paper Award, Student Research Showcase, INFORMS Regional Analytics Conference (IRAC), Atlanta</span><span class="award-year">2025</span></li>
-        <li><span class="award-text">Stewart Topper Fellowship Award, Georgia Tech (first-year Ph.D. academic performance)</span><span class="award-year">2021 – 22</span></li>
-        <li><span class="award-text">Dr. P. V. Sukhatme Memorial Award, IIT Bombay (M.Sc. Rank 1)</span><span class="award-year">2019</span></li>
-        <li><span class="award-text">All-India Rank 26, Graduate Aptitude Test in Engineering (GATE), Statistics</span><span class="award-year">2019</span></li>
-        <li><span class="award-text">Pfizer Scholarship, IIT Bombay (M.Sc. first-year Rank 1)</span><span class="award-year">2018</span></li>
-        <li><span class="award-text">All-India Rank 7, IIT Joint Admission Test for M.Sc. (IIT JAM), Mathematical Statistics</span><span class="award-year">2017</span></li>
-        <li><span class="award-text">Swami Asaktananda Award, University of Calcutta (highest B.Sc. academic distinction)</span><span class="award-year">2017</span></li>
-        <li><span class="award-text">Summer Research Fellowship, Indian Academy of Sciences</span><span class="award-year">2016, 17</span></li>
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <span class="t-date">Aug 2021 – May 2027 (expected)</span>
+          <div class="t-body">
+            <p class="exp-role">Ph.D. in Machine Learning</p>
+            <p class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</p>
+            <ul class="edu-detail">
+              <li>H. Milton Stewart School of Industrial and Systems Engineering; minor in Mathematics</li>
+              <li>Advisor: <a href="https://huo.isye.gatech.edu/" target="_blank" rel="noopener">Prof. Xiaoming Huo</a></li>
+              <li>GPA 3.85 / 4.00</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="t-date">2017 – 2019</span>
+          <div class="t-body">
+            <p class="exp-role">M.Sc. in Applied Statistics &amp; Informatics</p>
+            <p class="exp-org">Indian Institute of Technology Bombay · Mumbai, India</p>
+            <ul class="edu-detail">
+              <li>Department of Mathematics · Class Rank 1 of 38 · GPA 8.96 / 10.00</li>
+              <li>Thesis: <em>Financial Data Mining Using Multivariate Copulas</em></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="t-date">2014 – 2017</span>
+          <div class="t-body">
+            <p class="exp-role">B.Sc. in Statistics, First Class Honors</p>
+            <p class="exp-org">University of Calcutta · Kolkata, India</p>
+            <ul class="edu-detail">
+              <li>Department of Statistics; minor in Mathematics &amp; Computer Science</li>
+              <li>Grade 92.5%</li>
+            </ul>
+          </div>
+        </li>
       </ul>
-    </section>
-
-    <!-- ============ TEACHING & SERVICE ============ -->
-    <section id="service" class="section">
-      <h2>Teaching, Mentoring &amp; Service</h2>
-      <div class="service-grid">
-        <div class="service-block">
-          <h3>Teaching</h3>
-          <p>Head Teaching Assistant and Teaching Assistant, Georgia Tech ISyE (2021 – 2025):</p>
-          <ul>
-            <li><strong>ISyE 7406</strong>, Data Mining &amp; Statistical Learning (graduate, 300+ students). TA: Fall 2024, Spring 2025, Fall 2025 · Instructor: Prof. Xiaoming Huo</li>
-            <li><strong>ISyE 6414</strong>, Statistical Modeling &amp; Regression Analysis (graduate, 300+ students). Head TA: Fall 2022, Spring 2023 · TA: Summer 2022 · Instructor: Prof. Nicoleta Serban</li>
-            <li><strong>ISyE 2027</strong>, Probability with Applications (undergraduate). Student Assistant: Fall 2021, leading tutoring sessions</li>
-          </ul>
-        </div>
-        <div class="service-block">
-          <h3>Mentoring</h3>
-          <ul>
-            <li><strong>Kareena Mehta</strong>, undergraduate, Georgia Tech (Computer Science), Summer 2026</li>
-            <li><strong>Kevin Li</strong>, undergraduate, Washington University in St. Louis (Finance &amp; Data Science), Summer 2026 and Fall 2026</li>
-          </ul>
-        </div>
-        <div class="service-block">
-          <h3>Service</h3>
-          <p>Conference reviewer (2023 – present):</p>
-          <ul>
-            <li>International Conference on Learning Representations (ICLR)</li>
-            <li>International Conference on Machine Learning (ICML)</li>
-            <li>Conference on Neural Information Processing Systems (NeurIPS)</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <!-- ============ TECHNICAL SKILLS ============ -->
@@ -554,82 +371,12 @@
         </div>
       </dl>
     </section>
-
-    <!-- ============ NEWS ============ -->
-    <section id="news" class="section">
-      <h2>Recent News</h2>
-      <ul class="news-list">
-        <li>
-          <span class="news-date">Sep 2026</span>
-          <span class="news-text"><em>BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</em> accepted at NeurIPS 2026.</span>
-        </li>
-        <li>
-          <span class="news-date">Sep 2026</span>
-          <span class="news-text">New preprint, <em>Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</em>, under review at the <em>Electronic Journal of Statistics</em>.</span>
-        </li>
-        <li>
-          <span class="news-date">Sep 2026</span>
-          <span class="news-text">New preprint, <em>Report Resolution in Federated Multiple Testing under Family-Wise Error Control</em>, under review at <em>Biometrika</em>.</span>
-        </li>
-        <li>
-          <span class="news-date">2026</span>
-          <span class="news-text">Delivered the <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Data-Sufficiency Explorer</a> to the Georgia Department of Transportation, covering all 233 continuous count stations statewide.</span>
-        </li>
-        <li>
-          <span class="news-date">2026</span>
-          <span class="news-text">Presented <em>Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation</em> as a poster at STAI-X, Harvard University.</span>
-        </li>
-        <li>
-          <span class="news-date">2025</span>
-          <span class="news-text">2nd Place Paper Award at INFORMS IRAC for <em>LLmFPCA-detect</em>; invited talk at the INFORMS Annual Meeting and a poster at Georgia Statistics Day.</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p class="section-intro">
-        The best way to reach me is by email. I'm always glad to talk about
-        multiple testing, federated learning, or potential collaborations.
-      </p>
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:dubey.prasanjit@gmail.com">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">dubey.prasanjit@gmail.com</span>
-        </a>
-        <a class="contact-card" href="mailto:pdubey31@gatech.edu">
-          <span class="contact-label">Email (Georgia Tech)</span>
-          <span class="contact-value">pdubey31@gatech.edu</span>
-        </a>
-        <a class="contact-card" href="https://scholar.google.com/citations?user=jp3epVkAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-          <span class="contact-label">Google Scholar</span>
-          <span class="contact-value">View profile</span>
-        </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/prasanjit-dubey/" target="_blank" rel="noopener">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">in/prasanjit-dubey</span>
-        </a>
-        <a class="contact-card" href="https://github.com/pdubey96" target="_blank" rel="noopener">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">@pdubey96</span>
-        </a>
-        <a class="contact-card" href="cv.pdf" target="_blank" rel="noopener">
-          <span class="contact-label">Curriculum Vitae</span>
-          <span class="contact-value">pdubey96.github.io/cv.pdf</span>
-        </a>
-      </div>
-      <p class="contact-address">
-        H. Milton Stewart School of Industrial &amp; Systems Engineering<br />
-        Georgia Institute of Technology · Atlanta, GA
-      </p>
-    </section>
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
   </footer>
 
-  <script src="script.js?v=20260921c"></script>
+  <script src="script.js?v=20260926a"></script>
 </body>
 </html>
