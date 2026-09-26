@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20260926a" />
+  <link rel="stylesheet" href="style.css?v=20260926b" />
 
   <!-- Set theme before paint to avoid a flash -->
   <script>
@@ -42,7 +42,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- The top bar is repeated in all six pages; edit them together. -->
+  <!-- The top bar is repeated in all five pages; edit them together. -->
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
       <a class="nav-brand" href="index.html">Prasanjit Dubey</a>
@@ -51,8 +51,7 @@
         <li><a href="research.html" aria-current="page">Research</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="talks.html">Talks</a></li>
-        <li><a href="awards.html">Awards &amp; Service</a></li>
+        <li><a href="awards.html">Talks, Awards &amp; Service</a></li>
         <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
       </ul>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -63,7 +62,11 @@
 
   <main id="main">
     <h1 class="page-title">Research</h1>
-    <p class="note">Each line of work with its papers; full entries are on the <a href="publications.html">Publications</a> page.</p>
+    <p class="note">Each line of work with its papers, numbered as on the <a href="publications.html">Publications</a> page.</p>
+
+    <!-- Same groups, same order as publications.html, so the [n] counter
+         gives each paper the same number on both pages. -->
+    <div class="threads">
 
     <section id="multiple-testing" class="section thread">
       <h2>Optimal Multiple Testing</h2>
@@ -78,10 +81,10 @@
       </p>
       <div class="row">
         <span class="row-label">Papers</span>
-        <ul class="thread-papers">
+        <ol class="thread-papers">
           <li><a href="https://arxiv.org/abs/2605.27664" target="_blank" rel="noopener">BOOST: Power-Optimal Strong-FWER Testing for Block-Structured Multiplicity</a></li>
           <li><a href="https://arxiv.org/abs/2604.10986" target="_blank" rel="noopener">Most Powerful Tests with Exact Family-Wise Error Rate Control: Necessary Conditions and Fast Computation for General K</a></li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -100,12 +103,12 @@
       </p>
       <div class="row">
         <span class="row-label">Papers</span>
-        <ul class="thread-papers">
+        <ol class="thread-papers">
           <li><a href="https://arxiv.org/abs/2605.29642" target="_blank" rel="noopener">Matching Rates and Optimal Allocation for Federated Probe-Logit Distillation under Heterogeneous Bandwidth Budgets</a></li>
           <li><a href="https://arxiv.org/abs/2605.29139" target="_blank" rel="noopener">Anytime-Valid Federated Conformal RAG for LLM Swarms</a></li>
           <li><a href="https://arxiv.org/abs/2605.09986" target="_blank" rel="noopener">Federated Language Models Under Bandwidth Budgets: Distillation Rates and Conformal Coverage</a></li>
           <li>Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction <span class="muted">(in preparation)</span></li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -121,10 +124,10 @@
       </p>
       <div class="row">
         <span class="row-label">Papers</span>
-        <ul class="thread-papers">
+        <ol class="thread-papers">
           <li><a href="https://arxiv.org/abs/2609.27465" target="_blank" rel="noopener">Pooling Sequential Evidence Across Hypotheses: Rate-Optimal Multiple Testing at a Fixed Horizon</a></li>
           <li><a href="https://arxiv.org/abs/2609.19708" target="_blank" rel="noopener">Report Resolution in Federated Multiple Testing under Family-Wise Error Control</a></li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -139,18 +142,19 @@
       </p>
       <div class="row">
         <span class="row-label">Papers</span>
-        <ul class="thread-papers">
+        <ol class="thread-papers">
           <li><a href="https://arxiv.org/abs/2512.14604" target="_blank" rel="noopener">LLmFPCA-detect: LLM-powered Multivariate Functional PCA for Anomaly Detection in Sparse Longitudinal Texts</a></li>
           <li><a href="https://arxiv.org/abs/2305.18789" target="_blank" rel="noopener">Generalization Bounds for Magnitude-Based Pruning via Sparse Matrix Sketching</a></li>
-        </ul>
+        </ol>
       </div>
     </section>
+    </div>
   </main>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
   </footer>
 
-  <script src="script.js?v=20260926a"></script>
+  <script src="script.js?v=20260926b"></script>
 </body>
 </html>

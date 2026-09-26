@@ -123,6 +123,7 @@ strong { font-weight: 600; }
   color: var(--text-soft);
   font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
   padding: 0.15rem 0;
   border-bottom: 2px solid transparent;
 }
@@ -274,7 +275,18 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
 
 /* ---------------- Research page ---------------- */
 .thread > p { color: var(--text-soft); }
+/* Numbered [n] as on the Publications page. The counter runs across all four
+   research lines, so each paper keeps one number site-wide. */
+.threads { counter-reset: paper; }
 .thread-papers { list-style: none; margin: 0; padding: 0; font-size: 0.95rem; color: var(--text-soft); }
+.thread-papers > li { counter-increment: paper; position: relative; padding-left: 2.4rem; }
+.thread-papers > li::before {
+  content: "[" counter(paper) "]";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
 .thread-papers li + li { margin-top: 0.35rem; }
 
 /* ---------------- Publications ---------------- */
@@ -302,8 +314,8 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
 .pub:first-child { padding-top: 0.3rem; }
 .pub:last-child { border-bottom: 0; padding-bottom: 0; }
 
-/* The home page's short list is unnumbered: its order is by date, so
-   numbers there would disagree with the full list's. */
+/* The home page's selected papers are unnumbered: they are a hand-picked
+   subset, so numbers there would disagree with the full list's. */
 .pub-list-plain .pub { display: block; }
 .pub-list-plain .pub::before { content: none; }
 
