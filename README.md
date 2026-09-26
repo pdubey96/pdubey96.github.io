@@ -1,6 +1,6 @@
 # Personal website, Prasanjit Dubey
 
-A five-page academic site built with plain HTML and CSS. No build step, no
+A six-page academic site built with plain HTML and CSS. No build step, no
 dependencies, just open `index.html`.
 
 Live at <https://pdubey96.github.io/>.
@@ -12,6 +12,7 @@ Live at <https://pdubey96.github.io/>.
 | `index.html` | Home: profile, bio, interests, selected papers, experience, education, skills. |
 | `research.html` | The four research lines, each with its numbered papers. |
 | `publications.html` | The full, numbered publication list.             |
+| `experience.html` | Research & professional experience (also on Home). |
 | `news.html`  | Recent news.                                            |
 | `awards.html` | Talks; awards & honors; teaching, mentoring and service. |
 | `style.css`  | All styling, including the light/dark theme.            |
@@ -64,6 +65,8 @@ page, a home page that summarizes, and the detail on pages of its own.
 - **Research**: each research line's description and its papers, numbered as
   on the Publications page.
 - **Publications**: Publications & Preprints, numbered `[1]`–`[10]`.
+- **Experience** (`experience.html`): Research & Professional Experience, the
+  same section Home shows, on a tab of its own.
 - **News**.
 - **Talks, Awards & Service** (`awards.html`): Invited Talks & Presentations;
   Awards & Honors; Teaching, Mentoring & Service. Talks had a page of their
@@ -74,11 +77,13 @@ Every section of the academic CV has a counterpart on one of the pages.
 
 Things that are repeated, and so must be edited in more than one place:
 
-- **The top bar** is copied into all five pages. Edit them together; only the
+- **The top bar** is copied into all six pages. Edit them together; only the
   `aria-current="page"` attribute moves.
 - **Selected Papers** on Home repeats five hand-picked entries of
   `publications.html` (BOOST, the JASA and JCGS papers, Report Resolution,
   LLmFPCA-detect). When one of them changes status, update both.
+- **Research & Professional Experience** appears on Home and on
+  `experience.html`, word for word. Edit both.
 - **Research** lists each paper's title and link again. Its `[n]` come from
   a CSS counter, like the Publications page's, so the two pages must list the
   papers in the same groups and order for the numbers to agree.
@@ -117,11 +122,11 @@ change did not deploy.
 Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20260926b" />
-<script src="script.js?v=20260926b"></script>
+<link rel="stylesheet" href="style.css?v=20260926c" />
+<script src="script.js?v=20260926c"></script>
 ```
 
-**Bump that string whenever you change `style.css` or `script.js`**, in all five
+**Bump that string whenever you change `style.css` or `script.js`**, in all six
 pages and both to the same value (the date plus a letter works). A new query string is a new URL, so
 it cannot be served from cache. If a change still looks missing, `Cmd-Shift-R`.
 

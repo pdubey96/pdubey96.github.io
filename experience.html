@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience · Prasanjit Dubey</title>
+  <meta name="description" content="Research and professional experience of Prasanjit Dubey: sponsored research at Georgia Tech, Bloomberg, AT&amp;T Labs, ANZ and Walmart Labs." />
+  <meta name="author" content="Prasanjit Dubey" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Experience · Prasanjit Dubey" />
+  <meta property="og:description" content="Research and professional experience of Prasanjit Dubey: sponsored research at Georgia Tech, Bloomberg, AT&amp;T Labs, ANZ and Walmart Labs." />
+  <meta property="og:url" content="https://pdubey96.github.io/experience.html" />
+  <meta property="og:image" content="https://pdubey96.github.io/mypicnov2025.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon: "PD" monogram, self-contained -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232a4d7a'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='white' text-anchor='middle'%3EPD%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=20260926c" />
+
+  <!-- Set theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The top bar is repeated in all six pages; edit them together. -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-brand" href="index.html">Prasanjit Dubey</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="experience.html" aria-current="page">Experience</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="awards.html">Talks, Awards &amp; Service</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Research &amp; Professional Experience</h1>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <p class="section-intro">
+        Alongside my dissertation research, I have worked on sponsored research
+        at Georgia Tech and as a quantitative researcher in industry, building
+        statistical and machine-learning systems that shipped to real users.
+      </p>
+      <ul class="timeline">
+        <li>
+          <span class="t-date">Jan – Sep 2026</span>
+          <div class="t-body">
+            <p class="exp-role">Graduate Research Assistant, Georgia DOT Sponsored Research</p>
+            <p class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</p>
+            <p class="exp-desc">
+              Developed a statistical framework establishing how many valid days a
+              traffic-monitoring station needs in a month with incomplete data
+              before its monthly average can be published, and applied it across
+              Georgia's network of 233 continuous count stations. Delivered to
+              transportation planners as the Data-Sufficiency Explorer, an
+              interactive dashboard. PI: Prof. Xiaoming Huo.
+            </p>
+            <div class="pub-links exp-links">
+              <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="t-date">Summer 2025</span>
+          <div class="t-body">
+            <p class="exp-role">Quant PhD Intern, Quantitative Risk Analytics</p>
+            <p class="exp-org">Bloomberg L.P. · New York, USA</p>
+            <p class="exp-desc">
+              Built a Kalman-filter hazard-curve model for pricing credit
+              instruments from latent Nelson–Siegel factors and macroeconomic
+              covariates, integrated into Bloomberg Terminal's Credit VaR engine;
+              implemented a credit-rating-migration module using macro-conditioned
+              multinomial logit and intensity-based models to simulate obligor- and
+              index-level rating paths.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="t-date">Summer 2024</span>
+          <div class="t-body">
+            <p class="exp-role">Research Scientist Intern, Data Science &amp; AI Research</p>
+            <p class="exp-org">AT&amp;T Labs, Inc. · New Jersey, USA</p>
+            <p class="exp-desc">
+              Developed a framework integrating large language models with
+              multivariate functional data analysis for sparse longitudinal
+              customer-journey text, now under review at IEEE TPAMI; shipped a
+              production anomaly-detection application (Emotional AI) for
+              behavioral interventions.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="t-date">2019 – 2021</span>
+          <div class="t-body">
+            <p class="exp-role">Senior Quantitative Analyst, Wholesale Credit Risk Modeling</p>
+            <p class="exp-org">Australia and New Zealand Banking Group (ANZ) · Bengaluru, India</p>
+            <p class="exp-desc">
+              Built the Financial Ratio Surveillance Tool (FRST), a production
+              R Shiny stress-testing application forecasting default probabilities
+              and assessing the predictive power of financial ratios; led the
+              bank's statistical COVID-19 impact assessment across commercial
+              portfolios for APRA regulatory requirements.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="t-date">Summer 2018</span>
+          <div class="t-body">
+            <p class="exp-role">Research Intern, Data Science (International Pricing &amp; Demand Forecasting)</p>
+            <p class="exp-org">Walmart Labs · Bengaluru, India</p>
+            <p class="exp-desc">
+              Devised an ensemble of ridge, lasso, and elastic-net models to
+              forecast category-level sales from item-, region-, and
+              covariate-specific price elasticities; a cluster-based
+              (<em>k</em>-means) elasticity model reduced mean absolute percentage
+              error by 42.4% relative to the incumbent method.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script src="script.js?v=20260926c"></script>
+</body>
+</html>

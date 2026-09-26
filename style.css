@@ -353,6 +353,23 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
 }
 .pub-links a:hover { text-decoration: none; border-color: var(--accent); background: var(--accent-soft); }
 
+/* A paper's link sits at the end of its venue line, as [Paper] does on the
+   CV, instead of taking a line of its own. */
+.pub-link {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.65;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  white-space: nowrap;
+  vertical-align: 0.05em;
+}
+.pub-link:hover { text-decoration: none; border-color: var(--accent); background: var(--accent-soft); }
+.pub-body > :last-child { margin-bottom: 0; }
+
 /* ---------------- Timeline: date left, entry right ---------------- */
 /* Used for experience, education, talks, awards and news. */
 .timeline { list-style: none; margin: 0; padding: 0; }
@@ -433,8 +450,9 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
 /* ---------------- Responsive ---------------- */
 /* Below this width the links take their own row under the name, with the
    theme toggle staying top right; every page stays one tap away, with no
-   menu to open. */
-@media (max-width: 820px) {
+   menu to open. The seven links need about 870px on one row beside the name;
+   the extra 30px covers fallback fonts wider than Inter. */
+@media (max-width: 900px) {
   .nav-links { order: 1; flex-basis: 100%; }
 }
 
