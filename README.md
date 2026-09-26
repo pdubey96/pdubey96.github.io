@@ -59,8 +59,8 @@ The layout follows <https://hamedkhosravi99.github.io/>: a top bar on every
 page, a home page that summarizes, and the detail on pages of its own.
 
 - **Home** (`index.html`): photo beside name, title, affiliation and links
-  (email, Scholar, GitHub, LinkedIn, CV) · bio · contact callout with both
-  email addresses · Research Interests chips · Latest Papers · Research &
+  (email, Scholar, GitHub, LinkedIn, CV) · bio · contact callout (the gmail
+  address only, as on the CV) · Research Interests chips · Latest Papers · Research &
   Professional Experience · Education · Technical Skills.
 - **Research**: each research line's description and its papers.
 - **Publications**: Publications & Preprints, numbered `[1]`–`[10]`.
