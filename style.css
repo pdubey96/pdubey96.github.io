@@ -396,6 +396,19 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
 .t-body { min-width: 0; }
 .t-body > :last-child { margin-bottom: 0; }
 
+/* A small label over a group of timeline entries (Industry, Sponsored
+   Research), so a list grouped by kind does not read as out of date order. */
+.group-label {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.9rem;
+}
+.timeline + .group-label { margin-top: 2.2rem; }
+
 .exp-role { font-weight: 600; color: var(--text); margin: 0; line-height: 1.5; }
 .exp-org { color: var(--accent); font-size: 0.95rem; margin: 0.1rem 0 0.4rem; }
 .exp-desc { margin: 0; font-size: 0.95rem; color: var(--text-soft); }

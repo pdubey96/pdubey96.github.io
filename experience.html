@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20260926d" />
+  <link rel="stylesheet" href="style.css?v=20260926e" />
 
   <!-- Set theme before paint to avoid a flash -->
   <script>
@@ -67,29 +67,14 @@
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="section">
       <p class="section-intro">
-        Alongside my dissertation research, I have worked on sponsored research
-        at Georgia Tech and as a quantitative researcher in industry, building
+        Alongside my dissertation research, I have worked as a quantitative
+        researcher in industry and on sponsored research at Georgia Tech, building
         statistical and machine-learning systems that shipped to real users.
       </p>
+      <!-- Grouped by kind so the industry roles lead, newest first within
+           each group. (The CV lists all five in one run, newest first.) -->
+      <h3 class="group-label">Industry</h3>
       <ul class="timeline">
-        <li>
-          <span class="t-date">Jan – Sep 2026</span>
-          <div class="t-body">
-            <p class="exp-role">Graduate Research Assistant, Georgia DOT Sponsored Research</p>
-            <p class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</p>
-            <p class="exp-desc">
-              Developed a statistical framework establishing how many valid days a
-              traffic-monitoring station needs in a month with incomplete data
-              before its monthly average can be published, and applied it across
-              Georgia's network of 233 continuous count stations. Delivered to
-              transportation planners as the Data-Sufficiency Explorer, an
-              interactive dashboard. PI: Prof. Xiaoming Huo.
-            </p>
-            <div class="pub-links exp-links">
-              <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </li>
         <li>
           <span class="t-date">Summer 2025</span>
           <div class="t-body">
@@ -148,6 +133,27 @@
           </div>
         </li>
       </ul>
+      <h3 class="group-label">Sponsored Research</h3>
+      <ul class="timeline">
+        <li>
+          <span class="t-date">Jan – Sep 2026</span>
+          <div class="t-body">
+            <p class="exp-role">Graduate Research Assistant, Georgia DOT Sponsored Research</p>
+            <p class="exp-org">Georgia Institute of Technology · Atlanta, GA, USA</p>
+            <p class="exp-desc">
+              Developed a statistical framework establishing how many valid days a
+              traffic-monitoring station needs in a month with incomplete data
+              before its monthly average can be published, and applied it across
+              Georgia's network of 233 continuous count stations. Delivered to
+              transportation planners as the Data-Sufficiency Explorer, an
+              interactive dashboard. PI: Prof. Xiaoming Huo.
+            </p>
+            <div class="pub-links exp-links">
+              <a href="https://github.com/pdubey96/GDoT_CCS_Data_Sufficiency_Explorer" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </section>
   </main>
 
@@ -155,6 +161,6 @@
     <p>© <span id="year"></span> Prasanjit Dubey · Built with plain HTML &amp; CSS.</p>
   </footer>
 
-  <script src="script.js?v=20260926d"></script>
+  <script src="script.js?v=20260926e"></script>
 </body>
 </html>

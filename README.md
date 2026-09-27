@@ -84,6 +84,8 @@ Things that are repeated, and so must be edited in more than one place:
   LLmFPCA-detect). When one of them changes status, update both.
 - **Research & Professional Experience** appears on Home and on
   `experience.html`, word for word. Edit both.
+  It is grouped by kind, Industry and then Sponsored Research, each newest
+  first, so Bloomberg leads; the CV lists all five in one newest-first run.
 - **Research** lists each paper's title and link again. Its `[n]` come from
   a CSS counter, like the Publications page's, so the two pages must list the
   papers in the same groups and order for the numbers to agree.
@@ -122,8 +124,8 @@ change did not deploy.
 Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20260926d" />
-<script src="script.js?v=20260926d"></script>
+<link rel="stylesheet" href="style.css?v=20260926e" />
+<script src="script.js?v=20260926e"></script>
 ```
 
 **Bump that string whenever you change `style.css` or `script.js`**, in all six
