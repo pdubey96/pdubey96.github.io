@@ -288,6 +288,9 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
   font-variant-numeric: tabular-nums;
 }
 .thread-papers li + li { margin-top: 0.35rem; }
+/* Here the only label is "Papers", so its column fits the word rather than
+   the site-wide date column, which left a wide gap before the list. */
+.thread .row { grid-template-columns: auto minmax(0, 1fr); }
 
 /* ---------------- Publications ---------------- */
 .pub-list { list-style: none; margin: 0; padding: 0; }
@@ -473,6 +476,7 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
   .row,
   .skill-row { grid-template-columns: 1fr; }
   .t-date, .row-label, .skill-row dt { padding-top: 0; }
+  .thread .row { grid-template-columns: 1fr; }
 
   .site-footer p { padding: 1.4rem 1.25rem; }
 }

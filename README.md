@@ -122,8 +122,8 @@ change did not deploy.
 Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20260926c" />
-<script src="script.js?v=20260926c"></script>
+<link rel="stylesheet" href="style.css?v=20260926d" />
+<script src="script.js?v=20260926d"></script>
 ```
 
 **Bump that string whenever you change `style.css` or `script.js`**, in all six
