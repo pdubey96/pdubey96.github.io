@@ -20,6 +20,7 @@ Live at <https://pdubey96.github.io/>.
 | `cv.pdf`     | The CV. **Permanent link; see below.**                  |
 | `mypicnov2025.jpg` | Headshot, shown as the circular avatar.           |
 | `assets/`    | Spare folder for any additional images.                 |
+| `CV/`        | CV sources. **Git-ignored: never committed, never served.** |
 
 ## The CV link is permanent: keep the filename
 
@@ -36,9 +37,13 @@ new version:
 
 ```bash
 cd ~/Documents/GitHub/Website
-cp ~/Documents/GitHub/CV/academic/Prasanjit_Dubey_Academic_CV.pdf cv.pdf
+cp CV/academic/Prasanjit_Dubey_Academic_CV.pdf cv.pdf
 git add cv.pdf && git commit -m "Update CV" && git push
 ```
+
+The `CV/` folder sits inside this repo for convenience but is listed in
+`.gitignore`, so `git add -A` never picks it up. Keep it that way: it also holds
+private files, and anything committed here becomes a public URL on the site.
 
 That is the whole update. Do **not** rename the file to something dated
 (`..._Sep2026.pdf`), a dated filename means every shared link breaks the next
@@ -94,7 +99,7 @@ Old links to sections of the single-page site (`/#publications`, `/#talks`,
 `/#news`, `/#awards`, `/#service`) are forwarded to the new pages by a script in
 the head of `index.html`. `talks.html` no longer exists.
 
-Content is kept in sync with `~/Documents/GitHub/CV/academic/Prasanjit_Dubey_Academic_CV.tex`,
+Content is kept in sync with `CV/academic/Prasanjit_Dubey_Academic_CV.tex`,
 which is the source of truth. Publications appear in the CV's exact wording,
 status and arXiv links, but are grouped by research line rather than by
 submission status: **Optimal Multiple Testing**, **Federated &
