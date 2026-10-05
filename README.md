@@ -69,7 +69,7 @@ page, a home page that summarizes, and the detail on pages of its own.
   Research & Professional Experience · Education · Technical Skills.
 - **Research**: each research line's description and its papers, numbered as
   on the Publications page.
-- **Publications**: Publications & Preprints, numbered `[1]`–`[10]`.
+- **Publications**: Publications & Preprints, numbered `[1]`–`[11]`.
 - **Experience** (`experience.html`): Research & Professional Experience, the
   same section Home shows, on a tab of its own.
 - **News**.
@@ -110,8 +110,9 @@ last in its group with no link, on purpose, because it is not on arXiv yet
 (under review at ICLR 2027). Workshop acceptances (Second Workshop on MLxOR,
 NeurIPS 2026) appear as a ★ line under the paper, the way the CV marks a
 presentation, so each paper's badge keeps its main status. arXiv:2512.14131,
-which was merged into the JCGS paper, appears inside that entry as a "Companion
-paper" line (as on the CV) rather than as an entry of its own. All ten arXiv
+which was merged into the JCGS paper, is its own entry here (after the JCGS
+paper, by arXiv date), at Prasanjit's request; the CV instead carries it inside
+the JCGS entry as a "[Companion paper]" line. All ten arXiv
 IDs were verified against arxiv.org.
 
 Deliberately **not** on the public site, though they are on the CV: the home
@@ -134,8 +135,8 @@ change did not deploy.
 Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20261005a" />
-<script src="script.js?v=20261005a"></script>
+<link rel="stylesheet" href="style.css?v=20261005b" />
+<script src="script.js?v=20261005b"></script>
 ```
 
 **Bump that string whenever you change `style.css` or `script.js`**, in all six

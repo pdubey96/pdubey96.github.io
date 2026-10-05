@@ -373,11 +373,6 @@ main { flex: 1 0 auto; width: 100%; max-width: var(--maxw); margin: 0 auto; padd
 .pub-link:hover { text-decoration: none; border-color: var(--accent); background: var(--accent-soft); }
 .pub-body > :last-child { margin-bottom: 0; }
 
-/* A companion paper folded into an entry: its link leads the line, as
-   [Companion paper] does on the CV. */
-.pub-companion { margin: 0 0 0.6rem; font-size: 0.93rem; color: var(--text-soft); }
-.pub-companion .pub-link { margin: 0 0.5rem 0 0; }
-
 /* ---------------- Timeline: date left, entry right ---------------- */
 /* Used for experience, education, talks, awards and news. */
 .timeline { list-style: none; margin: 0; padding: 0; }
