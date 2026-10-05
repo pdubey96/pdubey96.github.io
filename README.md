@@ -107,8 +107,8 @@ Communication-Constrained Learning**, **Federated and Anytime-Valid Multiple
 Testing**, and **Statistical Machine Learning**. Within each group, papers run
 newest first by arXiv date, as on the CV. Byzantine-Robust Federated RAG sits
 last in its group with no link, on purpose, because it is not on arXiv yet
-(under review at ICLR 2027). Workshop acceptances (Second Workshop on MLxOR,
-NeurIPS 2026) appear as a ★ line under the paper, the way the CV marks a
+(under review at ICLR 2027). Workshop acceptances (the MLxOR workshop at NeurIPS
+2026) appear as a ★ line under the paper, the way the CV marks a
 presentation, so each paper's badge keeps its main status. arXiv:2512.14131,
 which was merged into the JCGS paper, is its own entry here (after the JCGS
 paper, by arXiv date), at Prasanjit's request; the CV instead carries it inside
