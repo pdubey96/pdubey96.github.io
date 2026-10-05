@@ -109,8 +109,10 @@ newest first by arXiv date, as on the CV. Byzantine-Robust Federated RAG sits
 last in its group with no link, on purpose, because it is not on arXiv yet
 (under review at ICLR 2027). Workshop acceptances (Second Workshop on MLxOR,
 NeurIPS 2026) appear as a ★ line under the paper, the way the CV marks a
-presentation, so each paper's badge keeps its main status. All nine arXiv IDs
-were verified against arxiv.org.
+presentation, so each paper's badge keeps its main status. arXiv:2512.14131,
+which was merged into the JCGS paper, appears inside that entry as a "Companion
+paper" line (as on the CV) rather than as an entry of its own. All ten arXiv
+IDs were verified against arxiv.org.
 
 Deliberately **not** on the public site, though they are on the CV: the home
 address, the phone number, and per-course GPAs beyond the summary figures.
@@ -132,8 +134,8 @@ change did not deploy.
 Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20260926e" />
-<script src="script.js?v=20260926e"></script>
+<link rel="stylesheet" href="style.css?v=20261005a" />
+<script src="script.js?v=20261005a"></script>
 ```
 
 **Bump that string whenever you change `style.css` or `script.js`**, in all six
