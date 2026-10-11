@@ -85,8 +85,8 @@ Things that are repeated, and so must be edited in more than one place:
 - **The top bar** is copied into all six pages. Edit them together; only the
   `aria-current="page"` attribute moves.
 - **Selected Papers** on Home repeats five hand-picked entries of
-  `publications.html` (BOOST, the JASA and JCGS papers, Report Resolution,
-  LLmFPCA-detect). When one of them changes status, update both.
+  `publications.html` (BOOST, the JASA and JCGS papers, Federated Multiple
+  Testing with Quantized p-Values, LLmFPCA-detect). When one of them changes status, update both.
 - **Research & Professional Experience** appears on Home and on
   `experience.html`, word for word. Edit both.
   It is grouped by kind, Industry and then Sponsored Research, each newest
@@ -135,8 +135,8 @@ change did not deploy.
 Every page therefore requests its assets with a version string:
 
 ```html
-<link rel="stylesheet" href="style.css?v=20261005b" />
-<script src="script.js?v=20261005b"></script>
+<link rel="stylesheet" href="style.css?v=20261010" />
+<script src="script.js?v=20261010"></script>
 ```
 
 **Bump that string whenever you change `style.css` or `script.js`**, in all six
