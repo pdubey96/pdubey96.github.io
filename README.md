@@ -105,14 +105,14 @@ status and arXiv links, but are grouped by research line rather than by
 submission status: **Optimal Multiple Testing**, **Federated &
 Communication-Constrained Learning**, **Federated and Anytime-Valid Multiple
 Testing**, and **Statistical Machine Learning**. Within each group, papers run
-newest first by arXiv date, as on the CV. Byzantine-Robust Federated RAG sits
-last in its group with no link, on purpose, because it is not on arXiv yet
-(under review at ICLR 2027). Workshop acceptances (the ML×OR workshop at NeurIPS
+newest first by arXiv date (the CV orders its single list differently).
+Byzantine-Robust Federated RAG, posted as arXiv:2609.33037 in September 2026,
+leads its group for that reason. Workshop acceptances (the ML×OR workshop at NeurIPS
 2026) appear as a ★ line under the paper, the way the CV marks a
 presentation, so each paper's badge keeps its main status. arXiv:2512.14131,
 which was merged into the JCGS paper, is its own entry here (after the JCGS
 paper, by arXiv date), at Prasanjit's request; the CV instead carries it inside
-the JCGS entry as a "[Companion paper]" line. All ten arXiv
+the JCGS entry as a "[Companion paper]" line. All eleven arXiv
 IDs were verified against arxiv.org.
 
 Deliberately **not** on the public site, though they are on the CV: the home
